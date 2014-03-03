@@ -7,7 +7,8 @@
                  [stasis "0.7.1"]
                  [ring "1.2.1"]
                  [optimus "0.14.2"]
-                 [enlive "1.1.5"]]
+                 [enlive "1.1.5"]
+                 [me.raynes/fs "1.4.4"]]
   :ring {:handler atlanis.blog.core/app}
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}

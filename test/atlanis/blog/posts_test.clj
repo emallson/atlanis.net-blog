@@ -27,6 +27,9 @@
                  :tags "music, front line assembly, dubstep, industrial"}
         post (get-org-post filename (slurp filename))]
     (is (= (:headers post) headers))
+    (is (= (:title post) (:title headers)))
+    (is (= (:date post) (clj-time.format/parse org-date-formatter (:date headers))))
+    (is (= (:path post) "/posts/echogenetic.html"))
     (is (not (empty? (:content post))))))
 
 (deftest test-get-posts

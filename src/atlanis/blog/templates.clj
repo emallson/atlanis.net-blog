@@ -45,3 +45,14 @@
                                (remove-attr :id)
                                (set-attr :href (:path post))
                                (content (date-formatter (:date post))))))
+
+(defsnippet one-post (snip "templates/one-post.html")
+  [root] [post next-post]
+  [:div#content] (substitute (html-snippet (:content post)))
+  [:div.byline] (content (date-formatter (:date post)))
+  [:a#more] (do->
+             (remove-attr :id)
+             (set-attr :href (:path next-post))
+             (content (if next-post "Next Post")))
+  [:input#disqus_identifier] (set-attr :value (:name post))
+  [:input#disqus_url] (set-attr :value (str "http://atlanis.net/blog" (:path post))))

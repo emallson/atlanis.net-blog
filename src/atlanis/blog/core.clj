@@ -5,16 +5,23 @@
             [optimus.prime :as optimus]
             [optimus.optimizations :as optimizations]
             [optimus.strategies :refer [serve-live-assets]]
-            [optimus.export]))
+            [optimus.export]
+            [atlanis.blog.posts :as posts]
+            [atlanis.blog.pages :as pages]))
 
 (defn get-assets
   []
   (concat
    (assets/load-bundle "public" "/styles.css" ["/styles/default.css"])))
 
+(defn load-posts
+  []
+  (posts/get-posts "resources/posts/"))
+
 (defn get-pages
   []
-  nil)
+  (require 'atlanis.blog.templates :reload)
+  (pages/get-pages (load-posts)))
 
 (def app
   (-> (stasis/serve-pages get-pages)

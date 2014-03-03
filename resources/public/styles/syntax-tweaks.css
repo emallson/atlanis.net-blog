@@ -1,0 +1,7 @@
+.post-date:before {
+    content: '';
+}
+
+.right {
+    float: right;
+}

@@ -3,7 +3,8 @@
 (ns atlanis.blog.templates
   (:require [net.cgrand.enlive-html :refer :all]
             [optimus.link :as link]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [atlanis.blog.config :as config]))
 
 (defn- stylesheet-link
   "Creates a <link> tag to a stylesheet."
@@ -21,7 +22,8 @@
 (deftemplate layout "templates/layout.html"
   [request body]
   [:title] (after (map stylesheet-link (link/bundle-paths request ["/styles.css"])))
-  [:div#content] (substitute body))
+  [:h1.site-title :a] (set-attr :href config/site-root)
+  [:div#content] (content body))
 
 (def date-format
   (clj-time.format/formatter "HH:mm 'on' EEE, dd MMMM yyyy 'EST'"))
@@ -35,21 +37,34 @@
 
 (defsnippet all-posts (snip "templates/all-posts.html")
   [root] [posts]
-  [:div.post] (clone-for 
-               [post posts]
-               [:div#content] (substitute (html-snippet (:content post)))
-               [:a#disqus-comments] (do->
-                                     (remove-attr :id)
-                                     (set-attr :href (str (:path post) "#disqus_thread")))
-               [:a#timestamp] (do->
-                               (remove-attr :id)
-                               (set-attr :href (:path post))
-                               (content (date-formatter (:date post))))))
+  [:article.post] (clone-for 
+                   [post posts]
+                   [:h1.entry-title :a] (do->
+                                        (set-attr :href (:path post))
+                                        (content (:title post)))
+                   [:div#content] (do->
+                                   (remove-attr :id) 
+                                   (content (html-snippet (:content post))))
+                   [:a#comments-link] (do->
+                                       (remove-attr :id)
+                                       (set-attr :href (str (:path post) "#disqus_thread")))
+                   [:a#timestamp] (do->
+                                   (remove-attr :id)
+                                   (set-attr :href (:path post))
+                                   (content (date-formatter (:date post))))))
 
 (defsnippet one-post (snip "templates/one-post.html")
   [root] [post next-post]
-  [:div#content] (substitute (html-snippet (:content post)))
-  [:div.byline] (content (date-formatter (:date post)))
+  [:h1.entry-title :a] (do->
+                        (set-attr :href (:path post))
+                        (content (:title post)))
+  [:div#content] (do->
+                  (remove-attr :id)
+                  (content (html-snippet (:content post))))
+  [:a#timestamp] (do->
+                  (remove-attr :id)
+                  (set-attr :href (:path post))
+                  (content (date-formatter (:date post))))
   [:a#more] (do->
              (remove-attr :id)
              (set-attr :href (:path next-post))

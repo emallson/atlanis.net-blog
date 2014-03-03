@@ -2,7 +2,8 @@
   (:require [clojure.java.shell :refer [sh]]
             [stasis.core :as stasis]
             [clj-time.format :refer [parse formatter]]
-            [me.raynes.fs :refer [base-name]]))
+            [me.raynes.fs :refer [base-name]]
+            [atlanis.blog.config :as config]))
 
 (defn get-org-headers
   "Gets the #+STUFF headers from an Org file. Returns a hash-map of them."
@@ -35,7 +36,7 @@
     {:headers headers
      :title (:title headers)
      :date (parse org-date-formatter (:date headers))
-     :path (str "/posts/" (base-name filename true) ".html")
+     :path (str config/site-root "posts/" (base-name filename true) ".html")
      :content (convert-org-to-html filename)}))
 
 (defn get-posts

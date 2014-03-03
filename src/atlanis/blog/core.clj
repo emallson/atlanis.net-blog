@@ -12,7 +12,8 @@
 (defn get-assets
   []
   (concat
-   (assets/load-bundle "public" "/styles.css" ["/styles/default.css"])))
+   (assets/load-bundle "public" "/styles.css" ["/styles/syntax.css"
+                                               "/styles/syntax-tweaks.css"])))
 
 (defn load-posts
   []
@@ -27,3 +28,12 @@
   (-> (stasis/serve-pages get-pages)
       (optimus/wrap get-assets optimizations/all serve-live-assets)
       wrap-content-type))
+
+(def export-directory "./build/")
+
+(defn export
+  []
+  (let [assets (optimizations/all (get-assets) {})]
+    (stasis/empty-directory! export-directory)
+    (optimus.export/save-assets assets export-directory)
+    (stasis/export-pages (get-pages) export-directory {:optimus-assets assets})))

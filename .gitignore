@@ -10,3 +10,5 @@ pom.xml.asc
 *~
 .#*
 /build/
+/deploy.sh
+/TAGS

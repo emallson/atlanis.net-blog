@@ -9,7 +9,7 @@
 (defn- stylesheet-link
   "Creates a <link> tag to a stylesheet."
   [path]
-  {:tag :link, :attrs {:rel "stylesheet" :href path}})
+  {:tag :link, :attrs {:rel "stylesheet" :href (str config/site-root path)}})
 
 (defn- inline-script
   "Creates an inline <script> tag."

@@ -4,6 +4,7 @@
   :license {:name "GNU General Public License v3"
             :url "https://www.gnu.org/licenses/gpl-3.0-standalone.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
+                 [clj-time "0.6.0"]
                  [stasis "0.7.1"]
                  [ring "1.2.1"]
                  [optimus "0.14.2"]

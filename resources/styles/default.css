@@ -1,0 +1,37 @@
+#content {
+    margin: 0 auto;
+    max-width: 829px;
+    padding: 36px 36px 0;
+    font-family: Merriweather, Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    color: #444;
+}
+
+a:hover, a:focus, a:active {
+    color: #666;
+}
+
+a, a:visited {
+    color: #444;
+}
+
+blockquote {
+    border-left: 1px solid #777;
+    font-style: italic;
+    margin-bottom: 30px;
+    padding: 0 0 0 30px;
+}
+
+h1.post-title {
+    text-align: center;
+    font-size: 2.6111em;
+    line-height: 1.26383em;
+    font-weight: inherit;
+}
+
+p.publish-date {
+    font-style: italic;
+}

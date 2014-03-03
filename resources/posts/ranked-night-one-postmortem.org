@@ -1,0 +1,83 @@
+#+BLOG: Record of Motion
+#+POSTID: 338
+#+DATE: [2014-01-22 Wed 11:29]
+#+TITLE: LoL: Ranked Night 1 Postmortem
+#+CATEGORY: Gaming, League of Legends
+#+TAGS: gaming, league of legends, lol, ranked
+#+OPTIONS: toc:nil num:nil
+
+As many of you are aware, League of Legends' 4th season has begun. Last night, I
+played my first two ranked games of a season. Care to take a gander at the
+results?
+
+>.>
+
+<.<
+
+I lost both.
+
+In both cases, I was the AD carry. I've got a good recent history of doing well
+in this role. My warmup game went spectacularly, with me demolishing my opponent
+in terms of CS and dueling (with the help of my good friend Raklok, who was
+playing support).
+
+* The First Game
+However, I am satisfied with neither my CS nor my lane control. In the first
+game, I had a scant 206 CS at 30 minutes (when the game ended). While this was a
+full 70 CS more than my opponent (an ezreal that ate in lane, ending the lane
+with 3 kills -- 2 from him and 1 from his support -- with no deaths), it is
+still quite far from my goal of having 200 CS at 20 minutes on an ADC.
+
+I reached 150 CS at 23 minutes during this game, which is worse even than my
+goal for mid/top lanes (150cs@20m). Over the remaining seven minutes I was
+consistently eaten by their Malzahar/Wukong combo (can't Barrier when silenced
+or suppressed; Wukong ended his lane 5-1-1 with approx. equal cs to me). Even
+when I managed to survive the initial onslaught, I was killed in the followup
+(eg J4 ult).
+
+This brings me to my second dissatisfaction: I was murdering Ezreal in
+lane. Wukong was murdering Udyr (who was worthless in teamfights as a result,
+but I digress) in lane. Wukong had 2 more kills than I with as much CS, while I
+contented myself merely with driving Ezreal out of lane. Although caution is a
+good, safe strategy, I should have taken advantage of his time out of lane.
+
+We only got a single Dragon in either game. One. Ever. In total. Yet, in both
+games we (Rak and I) were winning the lane. /We had dragon control!/ But we
+never took advantage of it. Further, even with Ezreal spending far more time out
+of lane than I, I still did not reach my CS goal. This is a problem. Lastly,
+while it is not strictly the job of bottom lane to help mid lane win, we had
+ample opportunity (and plenty of CC) to head of there and snag an easy kill or
+two. But we didn't. Ultimately, the first game was lost because I failed to take
+what opportunities were given.
+
+* The Second Game
+The second game, I did better. I took more advantage of our lane control and
+ended the lane with significantly more kills (5 or 6, if memory serves -- and
+that with only a single death). We were destroying them mid-game. Then I blew it
+again and again and again.
+
+The first time, we were at their inhibitor turret and I blew my positioning, got
+caught by a morgana root and subsequently died. In the very next teamfight, I
+disconnected and ended up getting my team aced. Finally, I blew the following
+fight by commiting the the most deadly of sins: /I used all of my disengages to
+chase!/ While my team killed the target, my rash usage of my flash, dash and
+barrier to chase -- of all people! -- /Lulu/ resulted in the 3 deaths for our
+team, leaving us unable to push down their turret and inhibitor (prior to this,
+we had not lost a single team member and could have easily taken both and then
+gotten dragon).
+
+This was late enough in the game (35m) that before we recovered from my
+foolishness the enemy team had taken baron, dragon and were pushing hard. The
+next team'fight' was a one-sided slaughter of my still-disorganized team. They
+won as a direct result of my mistake.
+
+My goals for the next night of ranked are the following:
+
+- Increase CS@20 to 200 for ADC, 150 for Top/Mid
+- Use lane advantage -- in particular for Dragon kills
+- Don't chase. Ever.
+
+Hopefully, I will be able to meet all 3 goals. The latter are simple playstyle
+fixes. Presence of mind should help resolve them. The former is a
+mechanical/playstyle problem, so I may not be able to meet that one
+immediately. However, I will meet it (eventually).

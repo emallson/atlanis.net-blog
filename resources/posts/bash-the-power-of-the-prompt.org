@@ -1,0 +1,133 @@
+#+BLOG: Record of Motion
+#+POSTID: 347
+#+DATE: [2014-01-23 Thu 12:16]
+#+TITLE: Designing a More Useful Shell Prompt
+#+CATEGORIES: Linux
+#+TAGS: bash, linux, command line, terminal
+#+OPTIONS: toc:nil num:nil ^:nil
+
+
+Bash (and shells in general) does a lot of incredibly useful things. One of the
+most overlooked I've seen is actually one of the most obvious: the prompt. The
+prompt is displayed after you run every command. Many people customize their
+prompts, but many more do not. However, since the prompt will always be
+displayed and will frequently be refreshed (by running commands), why not put it
+to work?
+
+* The Default
+The default prompt on my distro (Arch) is pretty simple:
+
+#+begin_src sh
+PS1='[\u@\h \W]\$ '
+#+end_src
+http://emallson.files.wordpress.com/2014/01/wpid-bash_default1.png
+
+While certainly useful, I find that the main information provided by it is that
+which I already know: who and where I am. If one uses SSH a lot, then certainly
+knowing who and where you are would be a good thing. However, there is a better
+way to get that information across when you actually need it.
+
+Further, there is other information that I constantly find myself looking for
+when I'm working in the prompt. For example, the current time and current git
+branch. Another useful fact is how many background jobs I have running/slept, so
+that I know whether I can safely disconnect from an ssh session or otherwise
+close the prompt.
+
+* Removing the Cruft (except when it's not)
+So: who and where I am is cruft -- except when I'm not where I think I am, in
+which case it's useful info. Let's start by removing it:
+
+#+begin_src sh
+PS1='[\W]\$ '
+#+end_src
+
+Simple enough. How do we add back the information if we are -- for example --
+not on the current machine? First, a note: when you ssh onto another machine it
+uses the prompt specified on that machine. Therefore, what we are testing is not
+"am I on another machine?" but "is the user logged in locally?". This is a
+surprisingly simple test. The environment variables ~$SSH_CLIENT~ and ~$SSH_TTY~
+are set when the user is logged in via ssh. Therefore, we can do the following:
+
+#+begin_src sh
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    PREFIX="$HOSTNAME:"
+else
+    PREFIX=""
+fi
+#+end_src
+
+This sets a variable ~$PREFIX~ to be either the empty string or
+~$HOSTNAME~. Note that we cannot use ~\h~ here (try it out to see why). We then
+set the prompt to:
+
+#+begin_src sh
+PS1="[$PREFIX\W]\$ "
+#+end_src
+
+This nicely solves the problem of knowing /where/ one is, but not /who/. For
+myself, this has thus far been sufficient because 1) I use the same username on
+the servers I commonly ssh into and 2) the ~\$~ changes from ~$~ to ~#~ when I'm
+root. However, one can simply add ~$USER~ to the ~$PREFIX~ variable.
+
+* Adding new toys (or tools; your pick)
+Bash has quite a few useful prompt codes which makes doing most of what I want(ed) easy:
+- ~\j~ shows the number of currently running jobs
+- ~\A~ shows the current time in 24-hour format
+
+So I can trivially add both of these features:
+
+#+begin_src sh
+PS1="[\j \A $PREFIX\W]\$ "
+#+end_src
+
+The final piece that I want right now is relatively simple: display what branch
+git is on iff the cwd is in a git repo. The solution is not so simple. First, a
+bit of background information: your .bashrc file is executed exactly once, when
+the shell first starts (and not always then, but that's another topic). The
+~$PREFIX~ variable will never change so long as the prompt is running. When you
+run ~su~ or ~ssh~ you get a new shell, so the value of ~$PREFIX~ will never need
+to be recomputed. This is not the case for the git branch, which needs to be
+rechecked all of the time.
+
+We can accomplish this by using a simple function:
+
+#+begin_src sh
+function display_git_branch() {
+    branch=$(git branch 2> /dev/null | grep "*" | cut -d\  -f2- 2> /dev/null);
+    if [[ -n "$branch" ]]; then
+        echo " ($branch)"
+    fi
+}
+#+end_src
+
+Walking through it: we set the variable ~$branch~ to...some monstrosity of
+command piping. I'll go through each command in turn:
+- ~git branch 2> /dev/null~ lists the branches of the current repository and
+  sends any error text to ~/dev/null~. This is necessary because if we are not
+  in a git repo, ~git branch~ will print an error to stderr, which would
+  otherwise be displayed every time the prompt were displayed.
+- ~grep *~ filters out everything /except/ the current branch (which is
+  offset by an asterisk).
+- ~cut -d\ -f2- 2> /dev/null~ strips the first space-delimited field from
+  the output (aka the asterisk).
+
+After that, we simply check if the result is non-empty and give back an
+appropriate string if so. Our prompt now looks like this:
+
+#+begin_src sh
+PS1='[\j \A $PREFIX\W$(display_git_branch)]\$ '
+#+end_src
+
+* The Finishing Touch
+Only one more problem remains: ~foo/src~ and ~bar/src~ display the same prompt!
+This is a problem for me, as I have many projects that I work on, almost all of
+which have a ~src~ directory. By changing the ~\W~ to ~\w~, the full path
+(relative to ~/~ or ~\~~) gets displayed. The final result:
+
+#+begin_src sh
+PS1='[\j \A $PREFIX\w$(display_git_branch)]\$ '
+#+end_src
+
+http://emallson.files.wordpress.com/2014/01/wpid-bash_mine.png
+
+*/fin/*

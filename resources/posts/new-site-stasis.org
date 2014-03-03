@@ -1,0 +1,102 @@
+#+TITLE: New Site (Built with Stasis)
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-03 Mon 15:33>
+#+OPTIONS: toc:nil num:nil
+#+CATEGORY: Linux, Programming, Clojure
+#+TAGS: linux, programming, clojure, blogging
+
+For a long time I've had my blog hosted on [[emallson.wordpress.com][Wordpress.com]], but today that has
+come to an end. While I've had a domain and server set up since mid-2013, I
+hadn't had the opportunity to decide how to build my new blog. However, when
+[[https://groups.google.com/forum/#!topic/clojure/nHaYzpcQpmc][stasis was announced]] at the end of January, I realized that I may have found my
+solution.
+
+* First off: why not Wordpress?
+  Nothing against Automatic, but after having run several WP blogs I sympathize
+  with this guy:
+
+  #+BEGIN_HTML
+  <blockquote class="twitter-tweet" lang="en"><p>Wondering how I managed to end up
+  building a Wordpress site today. For those of you that do this regularly, you
+  have my deepest sympathies.</p>&mdash; Daniel Grant (@danieljohngrant) <a
+  href="https://twitter.com/danieljohngrant/statuses/438410731760156672">February
+  25, 2014</a></blockquote>
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  #+END_HTML
+
+  I don't want to run another WP blog and I don't want to have to hack any more
+  PHP. The solution?
+
+* Static Site Generation
+  Static Site Generation is a pretty simple concept. You have some templates and
+  some content and you want to put the content in the templates. 
+
+  I only had one big requirement -- that I be able to write my posts in Org
+  format -- but I also wanted something that I could hack on. /Clojure/ is the
+  language I'm most interested in right now, so I started looking in that
+  direction. I toyed around with several options -- even going so far as to [[https://github.com/emallson/static][fork
+  nakkaya's /static/]] -- but eventually settled on [[https://github.com/magnars/stasis][magnar's /stasis/]].
+
+  The biggest problem I had with /static/ was how it dealt with posts. This
+  snippet says it best:
+
+  #+BEGIN_SRC clojure
+(defn list-files [d]
+  (let [d (File. (dir-path d))]
+    (if (.isDirectory d)
+      (sort
+       (FileUtils/listFiles d (into-array ["markdown"
+                                           "md"
+                                           "clj"
+                                           "cssgen"
+                                           "org"
+                                           "html"]) true)) [] )))
+
+(defn create-latest-posts 
+  "Create and write latest post pages."
+  []
+  (let [posts-per-page (:posts-per-page (config))
+        posts (partition posts-per-page
+                         posts-per-page
+                         []
+                         (reverse (list-files :posts)))
+        pages (partition 2 (interleave (reverse posts) (range)))
+        [_ max-index] (last pages)]
+    ...))
+  #+END_SRC
+
+  As you can see, the =posts= list is created by using =partition= on what
+  amounts to a directory listing. While this isn't a huge problem, my blog posts
+  aren't organized that way and I didn't want to change that. Having dates in
+  the file name looks ugly to me -- never mind the fact that it duplicates the
+  =#+DATE= headers that are in all of my posts.
+
+  This is where /stasis/ comes in. It's a no-batteries-included framework, which
+  means basically all it does is apply the templates to my sources. This leaves
+  designing the templates, template framework and sources to me. I used the
+  [[https://github.com/magnars/what-the-emacsd/][/whattheemacsd/]] source as my stasis-basis and built from there.
+
+  The biggest thing I had to do was implement conversion of Org files into
+  HTML. While not the fastest option (in terms of running time), I opted to
+  simply leave that to =emacs= by calling it in batch mode. The =#+STUFF=
+  headers are trivial to parse using regexp, so pulling in my =#+DATE='s was a
+  non-issue.
+
+  Ultimately, I'm pretty happy with how things turned out. This is the first
+  post I've written using the new system and it's worked great!
+
+* What next?
+
+  There are a couple of features that I want to build, starting with category
+  and tag views. After that, I may look at implementing an elisp command to
+  replace my current deployment method (a shell script) so that I can deploy
+  directly from /the/ editor.
+
+* Technology & Style Credits
+
+  - [[http://clojure.org][Clojure]] - badass lisp
+  - [[https://github.com/magnars/stasis][Stasis]] - used to generate the site
+  - [[https://github.com/magnars/what-the-emacsd/][what-the-emacsd]] - used as a basis for this site
+  - [[https://github.com/nakkaya/static][nakkaya's /static/]] - used as a basis for org-to-html functionality
+  - [[http://disqus.com][Disqus]] - used for comments
+  - [[http://theme.wordpress.com/themes/syntax/][Syntax Wordpress Theme]] - used as style basis

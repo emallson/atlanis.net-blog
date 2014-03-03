@@ -14,7 +14,7 @@
     (map (fn [row] [(keyword (clojure.string/lower-case (second row))) (nth row 2)])
          (re-seq #"(?m)^\s*#\+(\w+):\s*(.+)$" content)))))
 
-(def org-date-formatter (formatter "'['yyyy-MM-dd EEE HH:mm']'"))
+(def org-date-formatter (formatter "'<'yyyy-MM-dd EEE HH:mm'>'"))
 
 (def org-export-command
   "(progn
@@ -36,7 +36,7 @@
     {:headers headers
      :title (:title headers)
      :date (parse org-date-formatter (:date headers))
-     :path (str config/site-root "posts/" (base-name filename true) ".html")
+     :path (str "posts/" (base-name filename true) ".html")
      :content (convert-org-to-html filename)}))
 
 (defn get-posts

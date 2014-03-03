@@ -1,6 +1,6 @@
 #+BLOG: Record of Motion
 #+POSTID: 334
-#+DATE: [2014-01-07 Tue 08:49]
+#+DATE: <2014-01-07 Tue 08:49>
 #+TITLE: Reflections on 2013: Otherness and My Resolution
 #+CATEGORY: Life, Music
 #+TAGS: assemblage 23, music, reflections, resolution, otherness

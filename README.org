@@ -1,0 +1,11 @@
+#+TITLE: README
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-03 Mon 14:26>
+
+* What is this?
+  This is the source repository for my blog. The site is built using
+  [[https://github.com/magnars/stasis][stasis]].
+
+* Can I use this?
+  Yup! This source code is available under [[https://www.gnu.org/licenses/gpl-3.0.html][GPLv3]] ([[https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)][overview]]) and the blog content is
+  available under [[https://creativecommons.org/licenses/by/4.0/][CCv4]]

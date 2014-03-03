@@ -1,6 +1,6 @@
 #+BLOG: Record of Motion
 #+POSTID: 347
-#+DATE: [2014-01-23 Thu 12:16]
+#+DATE: <2014-01-23 Thu 12:16>
 #+TITLE: Designing a More Useful Shell Prompt
 #+CATEGORIES: Linux
 #+TAGS: bash, linux, command line, terminal

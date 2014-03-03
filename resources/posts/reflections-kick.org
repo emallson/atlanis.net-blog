@@ -1,6 +1,6 @@
 #+BLOG: Record of Motion
 #+POSTID: 329
-#+DATE: [2014-01-03 Fri 10:00]
+#+DATE: <2014-01-03 Fri 10:00>
 #+TITLE: Reflections from 2013: A Stiff Kick in the Rear
 #+CATEGORY: Life, Music
 #+TAGS: music, reflections, the birthday massacre, zeromancer

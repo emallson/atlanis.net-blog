@@ -1,6 +1,6 @@
 #+BLOG: rom
 #+POSTID: 296
-#+DATE: [2013-12-28 Sat 14:20]
+#+DATE: <2013-12-28 Sat 14:20>
 #+TITLE: Echogenetic -- WUBWUB
 #+TAGS: music, front line assembly, dubstep, industrial
 #+CATEGORY: Music

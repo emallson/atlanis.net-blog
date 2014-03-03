@@ -40,34 +40,31 @@
   [:article.post] (clone-for 
                    [post posts]
                    [:h1.entry-title :a] (do->
-                                        (set-attr :href (:path post))
+                                         (set-attr :href (str config/site-root (:path post)))
                                         (content (:title post)))
                    [:div#content] (do->
                                    (remove-attr :id) 
                                    (content (html-snippet (:content post))))
                    [:a#comments-link] (do->
                                        (remove-attr :id)
-                                       (set-attr :href (str (:path post) "#disqus_thread")))
+                                       (set-attr :href (str config/site-root (:path post) "#disqus_thread")))
                    [:a#timestamp] (do->
                                    (remove-attr :id)
-                                   (set-attr :href (:path post))
+                                   (set-attr :href (str config/site-root (:path post)))
                                    (content (date-formatter (:date post))))))
 
 (defsnippet one-post (snip "templates/one-post.html")
   [root] [post next-post]
-  [:h1.entry-title :a] (do->
-                        (set-attr :href (:path post))
-                        (content (:title post)))
+  [:h1.entry-title] (content (:title post))
   [:div#content] (do->
                   (remove-attr :id)
                   (content (html-snippet (:content post))))
-  [:a#timestamp] (do->
+  [:span#timestamp] (do->
                   (remove-attr :id)
-                  (set-attr :href (:path post))
                   (content (date-formatter (:date post))))
   [:a#more] (do->
              (remove-attr :id)
-             (set-attr :href (:path next-post))
+             (set-attr :href (str config/site-root (:path next-post)))
              (content (if next-post "Next Post")))
   [:input#disqus_identifier] (set-attr :value (:name post))
-  [:input#disqus_url] (set-attr :value (str "http://atlanis.net/blog" (:path post))))
+  [:input#disqus_url] (set-attr :value (str config/site-root (:path post))))

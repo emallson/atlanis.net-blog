@@ -1,6 +1,6 @@
 #+BLOG: Record of Motion
 #+POSTID: 309
-#+DATE: [2014-01-01 Wed 11:25]
+#+DATE: <2014-01-01 Wed 11:25>
 #+TITLE: Reflections from 2013: A Blade Called Regret
 #+CATEGORY: Music, Life
 #+TAGS: music, reflections, resolution, assemblage 23, regret

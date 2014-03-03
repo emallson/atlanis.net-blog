@@ -1,6 +1,6 @@
 #+BLOG: Record of Motion
 #+POSTID: 338
-#+DATE: [2014-01-22 Wed 11:29]
+#+DATE: <2014-01-22 Wed 11:29>
 #+TITLE: LoL: Ranked Night 1 Postmortem
 #+CATEGORY: Gaming, League of Legends
 #+TAGS: gaming, league of legends, lol, ranked

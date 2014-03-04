@@ -29,7 +29,20 @@ solution.
 
 * Static Site Generation
   Static Site Generation is a pretty simple concept. You have some templates and
-  some content and you want to put the content in the templates. 
+  some content, you want to put the content in the templates, and only want to
+  do so once. The site content is transformed into HTML once by the site owner
+  (aka me) and then served without any extra work by the server.
+
+  This has some big advantages. First, it makes a /very/ fast website, as the
+  restriction is not HTML generation time but simple transmission time. Second,
+  it is extremely secure because malicious content serving is impossible short
+  of someone gaining root access on my server (or someone hijacking Disqus; I
+  trust Disqus' security people to do better than I could -- it is their job,
+  after all).
+
+  Even better, because the code doesn't need to interact with the server, I am
+  not restricted to things that play nicely with the server (which Clojure
+  actually does through Java, but that's not a place I'd like to go right now).
 
   I only had one big requirement -- that I be able to write my posts in Org
   format -- but I also wanted something that I could hack on. /Clojure/ is the

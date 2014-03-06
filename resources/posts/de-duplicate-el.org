@@ -1,0 +1,74 @@
+#+TITLE: A Simple Extension Proposal for Delete-duplicate-lines
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-05 Wed 19:34>
+#+CATEGORY: Satire, Linux
+#+TAGS: satire, linux, emacs, emacs lisp
+#+OPTIONS: toc:nil num:nil
+
+I was reading [[http://emacsredux.com/blog/2014/03/01/a-peek-at-emacs-24-dot-4-delete-duplicate-lines/][this wonderful post]] on the new =delete-duplicate-lines= function
+that is being introduced in Emacs 24.4 and asked myself the question: why stop
+at lines? Therefore, I make the following proposals:
+
+* Rename =delete-duplicate-lines= to =de-duplicate=
+  You'll understand why soon™.
+
+* Deleting Duplicate Forms
+  How often have you been maintaining some code and found the same function
+  implemented in 3 different places? Wouldn't it be wonderful to have some way
+  to fix that? Using the magic of emacs, apply the =C-u C-u C-u C-u= prefix to
+  remove it!
+
+  For example:
+
+  #+BEGIN_SRC
+  (defun foo (x y)
+    (+ x y))
+
+  (defun bar (y z)
+    (- (* 2 y z) (* (1- y) z) (* y (1- z)))
+  #+END_SRC
+
+  Becomes:
+
+  #+BEGIN_SRC
+  (defun foo (x y)
+    (+ x y))
+  #+END_SRC
+
+  The function that has a smaller parse tree should be chosen.
+
+* Deleting Duplicate Statements
+  Why stop with lisp forms? Why not =de-duplicate= papers to remove needless
+  cruft and repetition? Well, with the =C-u C-u C-u C-u C-u= prefix you could!
+
+  Using the quintuple =C-u= prefix on Obama's NSA reform speech transcript gives
+  us:
+
+  #+BEGIN_QUOTE
+  Our intelligence agencies will continue to gather information
+  #+END_QUOTE
+
+  Miraculous!
+
+* Getting Philosophical
+  As the oft-quoted proverb[fn:proverb] says, "there is nothing new under the
+  sun". Clearly, therefore, everything is a duplicate of something that has
+  already been done! With the sextuple =C-u= (that's =C-u C-u C-u C-u C-u C-u=,
+  for those keeping track at home), we of the free software community can
+  finally come to terms with nihilistic philosophy!
+
+  As an example, running =C-u C-u C-u C-u C-u C-u de-duplicate= on this org
+  document produces:
+
+  #+BEGIN_QUOTE
+  \nbsp
+  #+END_QUOTE
+
+  By R'lyeh, am I glad that =M-x revert-buffer= exists!
+
+* In Closing
+  I'm hoping to get these extensions in for Emacs 24.5. Until then, you can get
+  the code off of [[https://gist.github.com/emallson/9380265][github]].
+
+[fn:proverb] It actually comes from /Ecclesiastes/, not /Proverbs/. This
+footnote exists only because the internet was made for nitpicking.

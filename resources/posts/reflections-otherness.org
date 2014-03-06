@@ -12,9 +12,9 @@ the person I didn't know I wanted to be.
 The summary of this behavior is found in the sixth verse ([[http://www.assemblage23.com/bruise][lyrics]]):
 
 #+BEGIN_QUOTE
-[It] Is altruism
-In its purest form
-A kind of otherness
+[It] Is altruism \\
+In its purest form \\
+A kind of otherness \\
 From which ego is torn
 #+END_QUOTE
 
@@ -35,9 +35,9 @@ always being relaxed, always being calm. /Where did you get the latter two?/ one
 might ask. The answer is simple: trust.
 
 #+BEGIN_QUOTE
-To trust completely
-With an open heart
-To risk the wounds
+To trust completely \\
+With an open heart \\
+To risk the wounds \\
 Of having it all fall apart
 #+END_QUOTE
 

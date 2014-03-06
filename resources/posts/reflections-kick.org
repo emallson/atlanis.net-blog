@@ -11,7 +11,7 @@ listen to the lyrics, you'll find that they're actually quite sad. Take, for
 example, the chorus:
 
 #+BEGIN_QUOTE
-    Come waste away now your last days
+    Come waste away now your last days \\
     Sign away your life today
 #+END_QUOTE
 

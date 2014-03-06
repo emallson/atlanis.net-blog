@@ -22,10 +22,10 @@ Assemblage 23's [[http://www.youtube.com/watch?v%3DSvV-xFsXCls][/Regret/]] has o
 I've ever heard:
 
 #+BEGIN_QUOTE
-    Regret is a dull and rusted blade
-    That covers me with scars that never fade
-    These wounds: a catalogue of flaws
-    Serve to remind me of all the pain I've caused
+    Regret is a dull and rusted blade \\
+    That covers me with scars that never fade \\
+    These wounds: a catalogue of flaws \\
+    Serve to remind me of all the pain I've caused \\
 #+END_QUOTE
 
 My initial understanding was of both the scars and the blade representing

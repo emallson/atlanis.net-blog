@@ -113,3 +113,5 @@ solution.
   - [[https://github.com/nakkaya/static][nakkaya's /static/]] - used as a basis for org-to-html functionality
   - [[http://disqus.com][Disqus]] - used for comments
   - [[http://theme.wordpress.com/themes/syntax/][Syntax Wordpress Theme]] - used as style basis
+
+  The full source code is available [[https://github.com/emallson/atlanis.net-blog/][on github]].

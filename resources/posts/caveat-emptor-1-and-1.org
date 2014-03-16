@@ -1,0 +1,79 @@
+#+TITLE: Caveat Emptor: 1&1
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-08 Sat 13:49>
+#+OPTIONS: toc:nil num:nil
+
+In August of last year, I purchased this domain (atlanis.net) using [[https://www.1and1.com/][1&1]] as a
+registrar. I admit, I did not do my homework. I'd dealt with them before as part
+of my work, so I didn't feel the need to. Bad decision.
+
+This past week, I decided to move my domain from 1&1 to [[https://www.namecheap.com][namecheap]]. While the
+transfer hasn't yet completed, I want to lay out some of the reasons for this
+decision as a warning to others who may look at 1&1 for domain registration in
+the future.
+
+TL;DR Version: Avoid 1&1.
+
+* Sub-domain Limit
+  I can only have 5 sub-domains with 1&1. This is actually what prompted me to
+  look for options in the first place. I already have 5 subs (forumite.,
+  static., media., mail., and another for work), but I wanted one for this very
+  blog. I was unable to find any way to either create additional subdomains
+  manually (by editing DNS records) or even a way to purchase more (not that I
+  would have).
+
+* Higher Prices
+  The price for a =.net= domain at 1&1 is ~15$/year, while at namecheap it is
+  ~12$/year. Not much difference, but I feel like I'm paying *more* for *less*.
+
+* Bad Interface
+  These are really just annoyances, but they did contribute to my decision:
+
+  - Slow
+
+    Loading the Domain Center (even after having everthing in cache!) takes a
+    whopping /12 seconds!/ After loading, every operation takes several seconds
+    to change states.
+
+  - Blocked by AdBlock+
+
+    I really don't know how 1&1 managed this one, but they did. The Domain
+    Center is blocked (in its entirety!) by the AdBlock+ extension, which means
+    that I have to disable it on 1&1's site (which isn't a big deal; 1&1 doesn't
+    serve ads on its site).
+
+  These things don't reflect any sort of quality. There is no reason the
+  interface needs to take so long to load, and there is no reason for it to be
+  built in such a way as to trigger ad blockers!
+
+* No Multi-Factor Authentication
+  Call me paranoid, but I don't trust single-factor authentication for much of
+  anything. 1&1 has no multi-factor option (although they /definitely/ had my
+  phone number). On the other hand, when I registered at namecheap one of the
+  first prompts was to set up multi-factor using my phone as the second
+  factor. Definitely made me feel better about it.
+
+* Spam Calls
+  Here is the real kicker. Arbitrary limits? OK. Marginally higher prices?
+  OK. Slow, ugly interface? OK. /Spam-calling your customers every day even after
+  being told they're not interested?/ *NOT OK!*
+
+  Here's a nice screenshot from my phone showing what I dealt with:
+
+  [[http://media.atlanis.net/blog/1-and-1-spam-log.png]]
+
+  I had to stop it by /changing my phone number on the 1&1 site!/ Not cool! I'm
+  not the only one who's had this problem. For example:
+  https://www.facebook.com/1and1/posts/10151313042057931
+
+  In my opinion, any company that spams me is not worth dealing with. The only
+  reason I waited this long was because of general business. Now I'm dealing
+  with the problem, but one question remains.
+
+* Why namecheap?
+  In a word: [[http://lifehacker.com/5944127/most-popular-domain-name-registrar-namecheap?tag=hive-five][Lifehacker]]. I read the comments and weighed the options. While that
+  post is a couple of years old, the namecheap site actually inspired way more
+  confidence in my than the 1&1 one (which I could swear is from 2001) ever did.
+
+  My transfer is due to complete on the 12th of this month. Here's hoping I
+  won't have any trouble with namecheap.

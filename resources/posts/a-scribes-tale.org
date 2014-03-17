@@ -1,0 +1,135 @@
+#+TITLE: A Scribe's Tale
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-17 Mon 12:17>
+#+CATEGORY: World of Warcraft
+#+TAGS: wow, inscription, auction house
+#+OPTIONS: toc:nil num:nil
+
+I've been playing WoW for a long, long time. Too long, some would say. Not long
+enough, others would contend. I began playing around patch 2.4, played through
+Wrath (but missed most of the content -- altaholics unite!) and ended up getting
+a new account for the start of Cataclysm.
+
+When I began in Cata, I was starting fresh. I had nothing from my old account, I
+was on a new realm and knew nobody. I [[us.battle.net/wow/en/character/korgath/Nimun/][leveled a Hunter]] because I wanted to try
+out this new-fangled 'focus' thing. For professions, I chose Herbalism and
+Inscription because I wanted to make some gold while leveling. I'd never played
+the AH game before and had no idea how significantly Cata's changes were going
+to impact the Inscription profession. But that's how everything starts, right?
+With ignorance?
+
+It's been several years now since I began working with Inscription. With this
+post, I want to summarize how it is, how it was and how its changed.
+
+* Leveling
+  I have to say that I lucked out. People recommend /Leatherworking/ for Hunters
+  -- a profession which had such a painful leveling curve that I had to blow
+  several thousand gold just to reach BC content with my sanity intact. By
+  comparison, Inscription is a cake-walk. Even better: starting at about 50
+  skill, you can start making things that the people with gold both want and
+  need.
+
+  Herbs are sort of odd compared to Leather, Cloth and Ore. Each 'tier' of herbs
+  has several different plants. For Alchemy, this can mean that you end up with
+  a ton of herbs that are on the right skill range, but be unable to make
+  anything because you're missing others from the skill range. Thankfully,
+  Inscription doesn't suffer from this problem. Even better, all Glyphs have a
+  multi-skillups for the first couple made! This meant that my Inscription skill
+  kept up with my level and I was at 525 almost as soon as I hit 85.
+
+* Endgame? Not quite
+  I wasn't really interested in serious gold making when I first reached 85. I
+  had plenty of gold from leveling two characters to afford 280% flying and
+  considered 310% flying a luxury not worth the cost. I spent most of my time
+  PvPing, dungeon-gearing my DK, and leveling alts.
+
+  I tried to keep a few glyphs on the AH and made sure to /ALWAYS/ do my daily
+  research. Unfortunately, Books of Glyph Mastery were incredibly expensive
+  (800-2000g) so I was limited to what Northrend and Minor Research could
+  give. The process of continuously reposting what few glyphs I had was
+  frustrating. I wasn't bringing in much gold and I didn't know why.
+
+  Looking back now, I have had a hard time figuring out why I got into the
+  AH. Everything was set against me. What drew me in? Two things: boredom and
+  economy. My arena partner was busy with RL and I wasn't into raiding. I did
+  BGs and heroic dungeons (which, in those days, were still relatively hard with
+  random pugs). One day, I was bored and decided to try to do something with my
+  latent Inscriptionist powers.
+
+  I had already been considering doing so because most important glyphs were
+  going for the absurd prices of 250-500g. This is around the upper end of
+  glyphs I'm selling /at the end of the subsequent expansion!/ So I took my
+  boredom and my sense of justice started down the path I am on today: the path
+  of the Scribe.
+
+* Enter: TradeSkillMaster
+  Google very quickly led me to a new (to me, at least) addon that was very
+  quickly displacing Auctioneer as the de-facto standard of auctioneering:
+  TradeSkillMaster. I downloaded it, spent an afternoon setting it up, and
+  proceeded to make about a bajillion glyphs.
+
+  They sold.
+
+  Read that again: /they sold!/ Not all of them, of course. Not even a
+  significant fraction of them sold, but enough did that I pulled a thousand
+  gold out of the mailbox the next morning. At the time, that was big money for
+  me. I took the gold and immediately spent it all on herbs to mill. I nearly
+  doubled the amount of glyphs I had up. More sold. Then more and more. At my
+  peak in Cata, I was bringing in around 8k per day just from glyphs. I
+  restocked daily and drove the competiton out of the market with greatly
+  reduced prices -- my cap for most of the expansion was 100g per glyph -- and
+  persistence.
+
+* Burnout
+  Alas, it was not to last. I got burnt out on WoW. I played less and less. I
+  stopped restocking, which resulted in sales dropping to a trickl. Others
+  moved in on my market. And I let them have it.
+
+  I quit playing around the start of MoP, came back for a brief stint in
+  mid-5.2, and left again after getting effectively 2-shot by a DK in an
+  arena. I just started playing again this past January because of the free
+  transfer off of Darkspear and over to Korgath (which doesn't have a 4:1 A:H
+  ratio). More importantly, two close friends of mine were starting to play
+  again. But, they were rerolling on a new realm! As Alliance!
+
+  I rolled with them and -- while my stubborn refusal to use heirlooms has
+  slowed my progress -- have been greatly enjoying it. I had [[http://www.reddit.com/r/woweconomy/comments/1y7sbm/help_dealing_w_highly_competitive_market_on_a/][tried and failed]] to
+  get back into the glyph market. My utter failure really stymied my enthusiasm
+  for the game. I enjoyed crafting and selling glyphs. It was (and is) a lot of
+  fun for me. Inscription is different from every other profession, and now I
+  was going to have to find something else.
+
+  I tried selling glyphs on my Ally realm, but was bitten by the fact that
+  Inscription sales scale with glyph variety. I didn't have the resources or
+  recipes to make much gold with it. I spent thousands of gold and tons of time
+  getting Inscription to the point I had it on Korgath; I didn't want to start
+  again. Even more: transferring my Hunter was (and is) not an option. Why?
+  [[http://www.wowhead.com/item%3D46814#comments][/That bloody dragonhawk!/]] However, everything changed this past Monday.
+
+** From 0 to 90 in $60
+   The sudden availability of the level 90 boosts took me by surprise. When I
+   got home on Monday, I followed my instincts. Despite my failure, despite my
+   lack of variety, I went and reposted all of my glyphs.
+
+   I made 4000g. I've averaged 6000g per day over the past week. To keep up with
+   sales, I had to set up TSM's deal-finding notifications in order to buy what
+   few reasonably-priced herbs pop up on the AH. My competition has almost
+   completely vanished. The only remaining contender has a woefully inadequate
+   stock, even compared to my paltry amount. My sales are continuing to
+   increase.
+
+   #+CAPTION: My sales from ~12am to ~11am -- not even close to peak hours
+   #+ATTR_HTML: :style height: 600px !important :class img-center
+   [[http://media.atlanis.net/blog/14-march-glyph-sales.png]]
+
+* The Way Forward
+   My goal right now is to do something that I've never managed once to do: get
+   a complete restock. 3 of every glyph on the AH, 20 of every glyph total. I
+   got close in Cata, but still never managed it. Now, I have the bank space, I
+   have the gold flow, I have the recipes (except for timeless -- screw
+   timeless), and this coming week I will have the time. The only thing missing
+   is the herbs.
+
+   I've been buying everything that I can and am still only barely managing to
+   keep my stock above 400 glyphs (peaking at ~650) -- far short of the ~1300
+   I'll have with a full restock. Deals are being made, hopefully it will help.

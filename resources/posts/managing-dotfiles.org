@@ -1,0 +1,50 @@
+#+TITLE: Managing & Syncing Dotfiles Across Computers
+#+AUTHOR: J David Smith
+#+DATE: <2014-03-24 Mon 09:06>
+#+CATEGORIES: Linux
+#+TAGS: linux, dotfiles
+
+I've recently come across the age-old issue of synchronizing my configuration
+files between my desktop and laptop. I initially used rsync, which worked well
+enough but had some issues -- namely that occasionally I'd break something,
+rsync it, and have no way to easily revert. For that reason (and others) I
+switched to git.
+
+It works quite well and I was happy with just git for quite some time -- and
+then this happened:
+
+#+BEGIN_HTML
+<blockquote class="twitter-tweet" lang="en"><p>&quot;File TAGS is large (1.8G),
+really open?&quot;&#10;&#10;No thanks, <a
+href="https://twitter.com/search?q=%23emacs&amp;src=hash">#emacs</a>, I think
+I&#39;m good. Need to find a way to make projectile ignore my ~/ repo</p>&mdash;
+J David Smith (@emallson) <a
+href="https://twitter.com/emallson/statuses/446742632169893888">March 20,
+2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+END_HTML
+
+Because I had a git repository in my =~= directory, [[https://github.com/bbatsov/projectile][projectile]] was trying to
+auto-regenerate the project tags. So it ran =ctags= on my home directory
+recursively. This completely filled the =/tmp= partition on my laptop and forced
+me to reboot. Clearly, it was time for me to change how I'd set it up.
+
+I began by looking at [[http://dotfiles.github.io/][dotfiles.github.io]] for ideas. While there were a lot of
+really cool things there, I really just wanted something simple that I could
+both understand completely in little time spent and maintain without much
+effort. In the end, I wrote a small shell script to manage syncing dotfiles
+between my git repo and my home directory. It uses rsync and implements 3
+commands:
+
+ - *in*: syncs changes from =~= to the current directory
+ - *out*: syncs changes from the current directory to =~=
+ - *add*: adds a new file to the repository
+
+Full source code is below:
+
+#+INCLUDE: "~/dotfiles/manage.sh" src sh
+
+So far, it's working quite well. It is a minor annoyance to have to sync before
+committing, but at least I'm not getting any more 2GB TAGS files.
+
+My dotfile repository is [[https://github.com/emallson/dotfiles][on github]]. You can check out my entire setup there.

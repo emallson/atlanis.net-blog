@@ -1,0 +1,143 @@
+#+TITLE: Tutoring Nightmares: Meet E
+#+AUTHOR: J David Smith
+#+DATE: <2014-04-11 Fri 12:46>
+#+OPTIONS: toc:nil num:nil
+#+TAGS: tutoring, school
+
+Be forewarned: this is a rant. I just needed to vent about this obnoxious
+situation I'm dealing with in my tutoring job.
+
+* A Bit of Background
+  I've been tutoring since I started college -- before that if you count helping
+  classmates with homework. My freshman year of college, I tutored Algebra I for
+  a small group of high school students. I enjoyed it, and it felt like I was
+  helping them understand the material (it can be hard to tell sometimes).
+
+  Unfortunately, due to schedule conflicts I had to stop doing that when my
+  sophomore year started. At the beginning of this semester, I got the
+  opportunity to begin tutoring again through the Tau Beta Pi honor society,
+  which I was initiated into last fall. I've enjoyed it greatly: for many
+  students it is easy to tell if I've been helpful (if they show up more than
+  once), which has helped me become a more effective tutor. Not to mention that
+  hanging out with the other tutors is a great time in and of itself.
+
+  Since I mostly tutor CS (a popular major here, at least for freshman and
+  first-semester sophomore students), I spend a lot of my time trying to explain
+  the concepts behind C++ syntax (example: =x->doSomething()= vs
+  =x.doSomething()= vs =X::doSomething()=). There is one project in particular
+  that I've spent a lot of time helping people with: building a CLI schedule
+  application.
+
+  The requirements for the application are pretty simple: read data from a
+  CSV-ish file, print it out in various ways (day schedule and week schedule,
+  mostly), take input for new events, and write it all back to a file. By this
+  point -- 2 semesters into the curriculum -- students have been exposed to all
+  of these things at least once. It's just a problem of putting it all together
+  (and of understanding pointers). The professor for the course has even
+  provided a helper class that reads individual lines into vectors of strings,
+  which is the hard part of reading the file. While most students just need help
+  filling in gaps in their understanding, occasionally they lack basic
+  understanding about the language itself (which is a very bad sign this late in
+  the semester) or seem unwilling or incapable of programming on their
+  own. Occasionally, they're also assholes about it. /E/ is one such student.
+
+* Meet E
+  E came for help for the first time on Tuesday. He wasn't the first there and I
+  was busy helping another person at that time. Despite that, he proceeded to
+  repeatedly ask me to come and help him. By the time I finally got to him, I
+  knew I'd be in for a long haul.
+
+  This rather large programming assignment is due today. On Tuesday, he'd barely
+  touched it. To make it worse, he didn't exhibit any understanding of what he
+  was doing -- or so I thought. When I mentioned iterating over a vector, he
+  dutifully implemented a full =for=-loop that was more-or-less correct, save
+  the body. I helped him flesh that out and finish implementing one of the
+  required classes (there are 4 very similar classes) and told him to work on
+  the others himself while I helped other students. He gave me an odd look,
+  packed up his laptop and left.
+
+  I should mention (it will be important later) that E is neither American nor a
+  native English speaker. However, he has a firm enough grasp of the language to
+  understand what I'm saying and to respond, so I am rather confident that he is
+  able to understand enough of what he might read on the internet to finish much
+  of the project himself.
+
+* E: Redux
+  I am in the habit of giving my email to students when they ask, because I can
+  often quickly identify the source of their problem and direct them towards the
+  solution. Having given my email to E, it was not surprising that I got an
+  email from him yesterday morning. The question it contained, however, was
+  simply "when will you be tutoring today?". I responded, expecting to find him
+  in RGAN commons (where we tutor) when I arrived. Instead, he showed up about
+  30 minutes later and again badgered me to come and help him while I was busy
+  with another person who was working on a different assignment. Other students
+  were hanging out, though they didn't need help at the moment.
+
+  E walked up to badger me again right as a member of the group I was with told
+  a joke -- everybody laughed. Everybody except E, of course, who hadn't heard
+  the joke. He threw me an incredulous look and stated "You guys are making fun
+  of me" quietly. Before I could respond, he stalked back to his table. I
+  shrugged it off, somewhat thankful because he had finally stopped badgering
+  me.
+
+  Coming up to me again about 15 minutes later, he announced that he really
+  needed help before he had to leave in 30 minutes. Annoyed, I told my current
+  tutoree that I'd be back once I'd helped him. He had plenty to work on as it
+  was. I was appalled to find that E had barely touched his code since
+  Tuesday. One more class was implemented -- mostly with copypasta from what I'd
+  helped him with -- and a legion of compiler errors (which Visual Studio had
+  dutifully highlighted in red) were preventing him from progressing. The worst
+  part, however, was what he said when I sat down to help him: "Fix it."
+
+* Fix it? Really?
+  I did a double-take when I heard that. /Fix it?/ I'm a tutor! I'm supposed to
+  help him understand what to do, not be an interactive debugger! Things went
+  downhill from there. I explained to him for the third time that you need the
+  variable types before their names in function declarations -- apparently
+  neither time I'd explained that on Tuesday had stuck. About half of the errors
+  were of in that vein.
+
+  In the process of going through God-knows-what, he made this comment to me:
+  'Whether I pass or not depends on the quality of the TAs and tutors, you
+  know?'. (Note: I don't remember his exact wording, but the gist of it is the
+  same.) I very nearly told him that he was on his own right then. The final
+  straw came about five minutes later, when he pulled out his phone and started
+  texting in the middle of my explanation of what the address-of (=&=) operator
+  does to pointers.
+
+  Naturally, when he started texting I stopped talking and finished my memory
+  diagram. "Continue," he told me as he motioned me towards the computer. Not
+  the paper, the computer. And then he was texting away again. I stood and told
+  him that I'd be back in a moment, then grabbed one of the other tutors and
+  dragged him out to the hall. After I explained the situation to him, he
+  advised me to give E something to work on and explain to him that I needed to
+  help other students. So I did. Again, E immediately got up and left.
+
+* This is *not* how to get someone to help you
+  Today I got this gem of an email:
+
+  #+ATTR_HTML: :style border: black 1px solid; :class img-center
+  [[http://media.atlanis.net/blog/tutoring-wtf-email.jpg]]
+
+  When I got this email, I was completely floored. I'd dedicated about 1.5 hours
+  to helping this guy over the course of a couple of days. My normal working
+  time for those 2 days is 3 hours, so I spent roughly /half of my time working
+  with E!/ And yet he has the gall to call me a racist for helping others more?
+
+  He caught me as I about to head to a CS gathering and asked if I could help
+  him. My negative response resulted in a demand to know why I had helped other
+  people on this project more. Indeed, several other people had come for help
+  with this project, and all of them had most of it done or were stuck on some
+  conceptual part (such as opening a file) and were able to complete the rest on
+  their own. The only person I spent /more/ time with is someone who paid me to
+  come in on the weekend and privately tutor him. Ultimately, I told him two
+  things: (1) I didn't help others more, and (2) I couldn't help him. Neither
+  claim was accepted.
+
+* In closing...
+  This situation is still developing. The project was due earlier today, and he
+  said he was going to ask his professor for an extension. I doubt that he'll
+  get it. Even still, I am concerned about his potential reaction to this and
+  how it'll impact things for me -- in particular tutoring. One thing I'm pretty
+  confident about, though: I'm not going to give out my email to students as
+  easily anymore.

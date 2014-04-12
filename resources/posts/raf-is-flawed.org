@@ -1,0 +1,146 @@
+#+TITLE: World of Warcraft's Recruit-a-Friend Reward Structure is Flawed
+#+AUTHOR: J David Smith
+#+DATE: <2014-04-05 Sat 16:09>
+#+CATEGORY: World of Warcraft
+#+TAGS: wow, raf, game design, reward structure
+#+OPTIONS: toc:nil num:nil
+
+* What instigated this post?
+  Last night, an unnamed redditor [[http://www.reddit.com/r/wow/comments/22931p/the_current_method_of_leveling/][asked the WoW sub-reddit]] what the fastest way
+  to level these days is. Why? Because their girlfriend "has been wanting to
+  start playing wow with me". Seems reasonable, right? S/he goes on to ask about
+  RaF.
+  
+  I immediately jump in and try to head off a disaster in the making. "What
+  disaster?" one may ask. Simple: RaF dungeon spamming isn't fun. In fact, I
+  wrote that "Personally, I wouldn't even use RaF because of how it completely
+  screws up the structure of the early game." This set the gears in my head to
+  whizzing frantically. What changed that made a really cool system actively
+  harm the game? And -- more importantly -- how can it be fixed?
+
+* What is Recruit-a-Friend?
+  In order to answer those questions, it is important to understand what the RaF
+  system actually does. [[https://us.battle.net/support/en/article/recruit-a-friend][Blizzard's FAQ]] does a good job of describing the
+  system. There are actually a lot of perks to using RaF, but there is one in
+  particular that really hurts the game: triple XP.
+
+  For levels 1 - 85, while in a group and similarly leveled the recruiter and
+  recruitee gain 3 times the normal amount of experience. This isn't simply mob
+  kill experience either: quest experience is also affected. The result these
+  days is that -- if you aren't spamming dungeons to power-level -- you
+  out-level zones just as you're starting to get their stories. To understand
+  the impact of this effect, we need to first dig deeper into what the reward
+  structure for /WoW/ is.
+
+* I Saved Westfall and all I got was this stupid T-Shirt!
+  /World of Warcraft/ is not unique in its structure. You help people, kill
+  monsters and collect rewards. There are two general classes of rewards in
+  /WoW/:
+
+  1. Power-increasing rewards
+
+     These rewards increase the player's overall power level (although perhaps
+     not immediately). Examples of this are loot (literal character power), gold
+     (economic power) and experience (character power -- albeit slightly
+     delayed).
+
+  2. Emotional rewards
+
+     These rewards tug on the player's heart-strings. Whether it's saving an
+     adorable little orphan boy or laughing maniacally as you [[http://www.wowhead.com/quest%3D27713][help Theldurin
+     punch Deathwing *in the face*]], these ones make you feel good (or bad) for
+     having done whatever it was you did. Type 1 rewards are a subset of this
+     reward class.
+
+  In my experience, the latter are much more important than the former. This is
+  upheld by observations of the reaction to the [[http://eu.battle.net/wow/en/forum/topic/3129363316][Madness]] [[http://eu.battle.net/wow/en/forum/topic/3061878630#12][of]] [[http://eu.battle.net/wow/en/forum/topic/5106020735][Deathwing]] fight and
+  [[http://eu.battle.net/wow/en/forum/topic/3660207854][Deathwing]] in general. While players got more powerful than ever before, there
+  was something missing. Emotional reward was lacking, and it showed.
+
+* How does this relate to Recruit-a-Friend?
+  The RaF system increases the gain rate of a particular Type 1 reward:
+  experience. However, it not only causes problems with the rate of gain of
+  other Type 1 rewards, but often outright prevents the gain of Type 2 rewards!
+
+  Recently, I leveled through Darkshore. Starting at level 11, I finished the
+  quest achievement at level 24. Had I been using RaF, I'd have only made it
+  through the first 1/3rd of the quests in that time. This would have left the
+  story hanging and broken the illusion of world-changing impact that Blizzard
+  has worked so hard to create.
+
+  As a result, emotional investment can become a liability preventing enjoyment
+  rather than a boon aiding it. It's like reading the first third of every
+  Spider-Man comic in order to 'catch up' to the current. Sure, one would reach
+  your goal faster, but at the cost of enjoying the process of reading comic
+  books. Even once you were caught up, you wouldn't understand all of the stuff
+  going on in the current issue.
+
+  I've seen situations where one player wants to get their significant other
+  into the game using RaF. In every case I've seen where the core benefit of RaF
+  is used to its fullest (ie by dungeon spamming), the SO quits playing.
+  Therefore, I believe that the overall benefit of RaF for the new player is
+  non-existent and in many cases it even causes damage to their perception and
+  enjoyment of the game.
+
+* Two Birds, One Stone
+  The solution to this problem is relatively simple. While simply removing the
+  XP bonus would go a long way towards preventing the damage currently being
+  done by RaF, why stop at simple prevention when it can be used to make the
+  game genuinely more enjoyable?
+
+  Think back, ye die-hard /WoW/ fans: what problem always crops up when questing
+  as a group? Yes, [[http://www.penny-arcade.com/comic/2004/12/31/a-being-of-indescribable-power][that one.]] You know it well. Someone plays while the others
+  are away, gets ahead in both experience and quests and is either forced to
+  wait for the group to catch up, retread the content you just did, or leave the
+  group behind.
+
+  With long-time players, this isn't much of a problem. We have alts, we have
+  mains, and we can always do something else while the group is offline. For a
+  new player, however, such options are severely lacking. PvP grants experience,
+  dungeons grant experience, even gathering mats to level crafting grants
+  experience these days! Imagine if the Priest class is the only one that really
+  clicks with your friend. Are you going to ask them to not play when you aren't
+  online? To roll an alt? A second priest?
+
+  This problem is solved relatively well by the /combination/ of massively
+  boosted XP and level granting: the increased XP rate encourages moving on to
+  other quest chains with relative frequency and level granting ensures that the
+  older player can keep up (most of the time). However, if triple XP is removed
+  from the system, then the problem again rears its ugly head because the player
+  no longer has such an incentive to move on in the middle of a quest chain.
+
+  Sure, the two players can remain evenly leveled, but what about quest
+  progress? Forcing the new player to retread content is not exactly ideal, so
+  why not allow the new player to catch the older one up not only in levels but
+  also in quests?
+
+  What I am proposing is this:
+
+  - Remove 3x XP from RaF
+  - Allow the new player to set the old player's quest progress to be equivalent
+    to their own
+
+  This would prevent XP gain from completely overriding any other sort of reward
+  in the game and would allow new players to continue questing with their
+  friends without worrying about quest dependencies and level discrepancies. To
+  my view, this would be superior to the current system -- especially since the
+  store is now the go-to way to pay for a fast 90. However, one question remains
+  to be answered.
+
+* Why was it designed this way in the first place?
+  /World of Warcraft/ is not the game that it once was. In ye olden days, when
+  Azeroth was yet young and paladins still only had 2 buttons for the first 40
+  levels, there were fewer quest chains and it was common -- up til Outland, at
+  least -- to complete a zone without having out-leveled it. In that era, there
+  were far fewer tales of merit told in the quests. 
+
+  Way back then -- near a full 6 years ago -- tripling the experience rate made
+  sense. It meant that you'd have to do one zone to get through a level range
+  instead of 2.5-3. Still, those days are gone and now, with the world designed
+  to take one player through a level range in one zone, it no longer makes
+  sense.
+
+  Here's hoping that Blizzard fixes this system soon. It bothers me to think of
+  the people potentially missing a great experience because something that
+  should be rewarding can easily become the opposite. With all of the dramatic
+  WoD changes incoming, this could be the /perfect/ time to do it!

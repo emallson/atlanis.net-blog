@@ -48,13 +48,10 @@ situation I'm dealing with in my tutoring job.
   knew I'd be in for a long haul.
 
   This rather large programming assignment is due today. On Tuesday, he'd barely
-  touched it. To make it worse, he didn't exhibit any understanding of what he
-  was doing -- or so I thought. When I mentioned iterating over a vector, he
-  dutifully implemented a full =for=-loop that was more-or-less correct, save
-  the body. I helped him flesh that out and finish implementing one of the
-  required classes (there are 4 very similar classes) and told him to work on
-  the others himself while I helped other students. He gave me an odd look,
-  packed up his laptop and left.
+  touched it. To make it worse, he exhibited little understanding of what he was
+  doing. I helped him finish implementing one of the required classes (there are
+  4 very similar classes) and told him to work on the others himself while I
+  helped other students. He gave me an odd look, packed up his laptop and left.
 
   I should mention (it will be important later) that E is neither American nor a
   native English speaker. However, he has a firm enough grasp of the language to
@@ -65,7 +62,7 @@ situation I'm dealing with in my tutoring job.
 * E: Redux
   I am in the habit of giving my email to students when they ask, because I can
   often quickly identify the source of their problem and direct them towards the
-  solution. Having given my email to E, it was not surprising that I got an
+  solution. Having given my email address to E, it was not surprising that I got an
   email from him yesterday morning. The question it contained, however, was
   simply "when will you be tutoring today?". I responded, expecting to find him
   in RGAN commons (where we tutor) when I arrived. Instead, he showed up about
@@ -82,20 +79,21 @@ situation I'm dealing with in my tutoring job.
 
   Coming up to me again about 15 minutes later, he announced that he really
   needed help before he had to leave in 30 minutes. Annoyed, I told my current
-  tutoree that I'd be back once I'd helped him. He had plenty to work on as it
-  was. I was appalled to find that E had barely touched his code since
-  Tuesday. One more class was implemented -- mostly with copypasta from what I'd
-  helped him with -- and a legion of compiler errors (which Visual Studio had
-  dutifully highlighted in red) were preventing him from progressing. The worst
-  part, however, was what he said when I sat down to help him: "Fix it."
+  tutoree that I'd be back once I'd helped him. He had plenty to work anyway.
+
+  I was appalled to find that E had barely touched his code since Tuesday. One
+  more class was implemented -- mostly with copypasta from what I'd helped him
+  with -- and a legion of compiler errors (which Visual Studio had dutifully
+  highlighted in red) were preventing him from progressing. The worst part,
+  however, was what he said when I sat down to help him: "Fix it."
 
 * Fix it? Really?
   I did a double-take when I heard that. /Fix it?/ I'm a tutor! I'm supposed to
   help him understand what to do, not be an interactive debugger! Things went
   downhill from there. I explained to him for the third time that you need the
   variable types before their names in function declarations -- apparently
-  neither time I'd explained that on Tuesday had stuck. About half of the errors
-  were of in that vein.
+  neither time I'd explained that on Tuesday had stuck and he hadn't bothered
+  Googling the error messages. About half of the errors were in that vein.
 
   In the process of going through God-knows-what, he made this comment to me:
   'Whether I pass or not depends on the quality of the TAs and tutors, you
@@ -122,7 +120,8 @@ situation I'm dealing with in my tutoring job.
   When I got this email, I was completely floored. I'd dedicated about 1.5 hours
   to helping this guy over the course of a couple of days. My normal working
   time for those 2 days is 3 hours, so I spent roughly /half of my time working
-  with E!/ And yet he has the gall to call me a racist for helping others more?
+  with E!/ And yet he has the gall to call me a racist for supposedly helping
+  others more?
 
   He caught me as I about to head to a CS gathering and asked if I could help
   him. My negative response resulted in a demand to know why I had helped other

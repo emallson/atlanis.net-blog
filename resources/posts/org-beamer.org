@@ -43,15 +43,19 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   - Structured editing
     
     Org-mode is a successor to things like =outline-mode=, which (as the name
-    suggests) was/is used for outlining! Org-mode extends it in many, many
+    suggests) was/is used for outlining. Org-mode extends it in many, many
     ways. I won't list them all. You can find a feature list [[http://orgmode.org/features.html][here]].
 
     Being an Emacs major mode, Org-mode also packs quite the editing punch. It
-    comes loaded with hotkeys, syntax highlighting, outline folding, and a bevy
-    of other features.
+    comes loaded with utility functions, syntax highlighting, outline folding,
+    and a bevy of other features. For example, I can re-order headlines (or
+    slides) using =M-S-<up>/<down>= (that's =Meta-Shift-<up>= or
+    =Meta-Shift-<down>= for those unused to Emacs-style key-chords). If I want
+    to focus on a particular section, =C-x n s= will narrow the buffer to only
+    that section (=C-x n w= will widen the buffer back to the entire file).
 
-    #+ATTR_HTML: :width 200 :class img-center
-    [[http://media.atlanis.net/blog/org-mode-screen.jpg][http://media.atlanis.net/blog/org-mode-screen.jpg]]
+    #+ATTR_HTML: :width 400 :class img-center
+    [[http://media.atlanis.net/blog/org-mode-screen.jpg]]
     
   - LaTeX export 
     
@@ -69,13 +73,13 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
     
     While HTML is a bit less "wonderful" than LaTeX, it is still quite
     important. Org-mode documents can be exported to HTML in much the same
-    way as LaTeX is. In fact, this blog post was written as an Org document and
+    way as LaTeX is. In fact, [[https://github.com/emallson/atlanis.net-blog/blob/master/resources/posts/org-beamer.org][this blog post]] was written as an Org document and
     then exported into HTML! You can read more about how this is done in a
     [[http://atlanis.net/blog/posts/new-site-stasis.html][previous post]].
 
-  Of course, there are /many/ other things it can do. I've only barely
-  scratched the surface of its capabilities myself. However, these functions
-  are sufficient for our usage: writing Beamer presentations in Org-mode.
+  Of course, there are /many/ other things it can do. I myself have only barely
+  scratched the surface of its capabilities. However, these functions are
+  sufficient for our usage: writing Beamer presentations in Org-mode.
 
 * Why Org-mode on top of Beamer?
   The primary reason I use Org-mode over Beamer rather than just Beamer is
@@ -163,38 +167,42 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   More content can be written, and presentation regeneration is just a key
   chord away.
 
-** So...What's My Workflow?
+** So...What's My Setup?
 
-   This is all well and good, but John asked about my /workflow/, not how to
-   use Org mode! My workflow is simple:
+   This is all well and good, but John asked about /my setup/, not how to use
+   Org mode! My workflow can be summarized like this:
 
-   - Emacs open on one monitor, Evince open on the other
+   - Keep Emacs open on one monitor and Evince on the other
    - Export PDF every time a not-insignificant change is made
    - Monitor output in Evince (which refreshes every time the PDF is changed)
 
    Very simple and straightforward, just the way I like it. While it is not
-   quite as simple as a WYSIWYG editor like PowerPoint, it integrates much
-   better into my usual development environment.
+   quite as simple as a WYSIWYG editor like PowerPoint (which lacks the export
+   step), it integrates much better into my usual environment.
 
 * But Can I Use Org-mode for Presentations Without Emacs?
 
-  In theory, yes. The format has parsers written in other languages (Common
-  Lisp, PHP and Python are all listed on the [[http://orgmode.org/worg/org-tools/][community tools page]]) and there
-  are =vim= plugins for Org files ([[https://github.com/hsitz/VimOrganizer][VimOrganizer]] and [[https://github.com/jceb/vim-orgmode][vim-orgmode]]).
+  In theory, it is possible to use Org-mode outside of Emacs. Org documents are
+  plain text and pretty straightforward to parse. The format has parsers
+  written in other languages (Common Lisp, PHP and Python are all listed on the
+  [[http://orgmode.org/worg/org-tools/][community tools page]]) and there are vim plugins for Org files ([[https://github.com/hsitz/VimOrganizer][VimOrganizer]]
+  and [[https://github.com/jceb/vim-orgmode][vim-orgmode]]).
 
-  In practice, not really. The parsers are geared towards reading org documents
-  into data structures for manipulation, and the vim plugins implement only a
-  subset of the functionality. If you want to use Org mode, it is best to use
-  Emacs along with it.
+  In practice, it isn't really a good idea. The parsers are geared towards
+  reading org documents into data structures for manipulation, and the vim
+  plugins implement only a subset of Org-mode's functionality. If you want to
+  use Org mode it is best to use Emacs along with it, even if you just edit in
+  vim and fall back to Emacs for exporting.
 
-  If you're a vim user on the road to recovery, you should check out [[https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/][bling's
-  Emacs->Vim Survival Guide]] (also his [[https://bling.github.io/blog/2013/09/09/vim-in-emacs-bootstrap/][Emacs bootstrapping post]]).
+  If you're a vim user who is +on the road to recovery+ interested in trying
+  Emacs, you should check out bling's [[https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/][Emacs->Vim Survival Guide]] and [[https://bling.github.io/blog/2013/09/09/vim-in-emacs-bootstrap/][Emacs
+  bootstrapping]] posts.
 
 * Example Time!
 
   Of course, all of this is moot unless you can actually generate
-  decent-looking presentations with it! That is the goal, right? Since I've
-  done a some presentations recently, I'll pull two from my stock.
+  decent-looking presentations with it, right? Since I've done a some
+  presentations recently, I'll pull two from my stock.
 
   - Birds of a Feather Clojure Code
 
@@ -206,7 +214,8 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
     Note: the code in this presentation could have been included using
     =#+INCLUDE=, however it was longer than the slide width and I wasn't sure
     of a good way to do wrapping without either modifying the code directly or
-    copying it into the org file.
+    copying it into the org file. I opted for the latter to preserve proper
+    formatting in the code itself.
 
   - Keeping Current Clojure Presentation
 
@@ -218,18 +227,27 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
     /Abstract/ subtree is not exported because it has the =:noexport:=
     tag). This feature can be used for storing speech notes with the slides
     without having them exported alongside them.
+    
+  - Biographical Slide for Internship
+    
+    As part of my upcoming summer internship, I was asked to put together a
+    slide giving a brief biography. This was done [[http://media.atlanis.net/blog/ibm_bio_slide.org][as an Org document]]. The PDF
+    output can be viewed [[http://media.atlanis.net/blog/org-beamer-example-output/ibm_bio_slide.pdf][here]]. This example demonstrates using columns and
+    embedding images.
 
   You might note that neither of these presentations are particularly
   pretty. However, this is because in both cases I had very little time
-  available when they were written. You can see many better-looking examples by
-  searching for =beamer presentation= on [[https://www.google.com/search?q=beamer+presentation&tbm=isch][Google Images]].
+  available when they were written and so used the default Beamer template. You
+  can see many better-looking examples by searching for =beamer presentation=
+  on [[https://www.google.com/search?q=beamer+presentation&tbm=isch][Google Images]].
   
 * So Should I Use Org-mode?
   
   Yes! At least give it a try! Org-mode has come bundled with Emacs since
-  version 22, but you can also install the latest version within Emacs via =M-x
+  version 22, but you can also optionally install the latest version via =M-x
   package-install RET org RET=.
 
   While I have no doubts that many people will continue to prefer PowerPoint
   for their presentations, using Beamer with Org-mode is an effective and in
-  many cases superior alternative.
+  many cases superior alternative -- especially in Math- and Code-heavy fields
+  like Computer Science.

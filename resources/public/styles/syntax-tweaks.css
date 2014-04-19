@@ -18,3 +18,8 @@
 iframe.twitter-tweet {
     margin: 0 auto !important;
 }
+
+/* Used to give fixed maximum heights to potentially long output files */
+div.med-src-container pre.src {
+    max-height: 900px;
+}

@@ -18,9 +18,11 @@
 
 (def org-export-command
   "(progn
+     (load \"~/.emacs.d/custom.el\")
      (package-initialize)
      (require 'org)
      (find-file \"%f\")
+     (setq org-confirm-babel-evaluate nil)
      (org-html-export-as-html nil nil nil t)
      (princ (buffer-string)))")
 
@@ -32,6 +34,7 @@
 (defn get-org-post
   "Gets a post from an Org file."
   [filename content]
+  (println (str "Processing: " filename))
   (let [headers (get-org-headers content)]
     {:headers headers
      :title (:title headers)

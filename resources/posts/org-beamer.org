@@ -1,0 +1,235 @@
+#+TITLE: Turning on Your High-Beams: Using Beamer with Org-mode
+#+AUTHOR: J David Smith
+#+DATE: <2014-04-18 Fri 22:19>
+#+OPTIONS: toc:nil num:nil
+
+This afternoon, my friend and fellow student [[https://twitter.com/johnwalker301][John Walker]] tweeted [[https://twitter.com/johnwalker301/status/457268539519283200][asking me to
+blog about my "beamer / org-mode setup"]]. Why? He's trying to convert the one of
+our professors (Dr. Calvert) to it from Microsoft PowerPoint. No way I can turn
+this down! So here I am, writing this post. It ought to be useful to more than
+just Dr. Calvert though -- so if you're not him keep reading anyway!
+
+* What is Beamer?
+  
+  [[https://bitbucket.org/rivanvx/beamer/wiki/Home][Beamer's official site]] sums up the advantages and disadvantages of using
+  Beamer fairly well, so I'll let it speak for itself:
+
+  #+BEGIN_QUOTE
+  Beamer is a LaTeX class for creating presentations that are held using a
+  projector, but it can also be used to create transparency slides. Preparing
+  presentations with Beamer is different from preparing them with WYSIWYG
+  programs like OpenOffice.org's Impress, Apple's Keynote, or KOffice's
+  KPresenter. A Beamer presentation is created like any other LaTeX
+  document.
+  ...
+  The obvious disadvantage of this approach is that you have to know
+  LaTeX in order to use Beamer. The advantage is that if you know LaTeX, you
+  can use your knowledge of LaTeX also when creating a presentation, not only
+  when writing papers.
+  #+END_QUOTE
+
+  If you are familiar with the advantages and disadvantages of Microsoft Word
+  versus LaTeX, then you are familiar with them for PowerPoint versus
+  Beamer. Beamer is /not/ well-suited to every presentation. However, it is
+  very powerful for math-heavy or code-oriented presentations because of how
+  the equations and source can be embedded into LaTeX. 
+  
+* What is Org-mode?
+  According to [[http://orgmode.org][the official site]], Org-mode is an Emacs major mode for
+  "keeping notes, maintaining TODO lists, and doing project planning with a
+  fast and effective plain-text system." It has a /ton/ of features, but the
+  ones I use most are:
+
+  - Structured editing
+    
+    Org-mode is a successor to things like =outline-mode=, which (as the name
+    suggests) was/is used for outlining! Org-mode extends it in many, many
+    ways. I won't list them all. You can find a feature list [[http://orgmode.org/features.html][here]].
+
+    Being an Emacs major mode, Org-mode also packs quite the editing punch. It
+    comes loaded with hotkeys, syntax highlighting, outline folding, and a bevy
+    of other features.
+
+    #+ATTR_HTML: :width 200 :class img-center
+    [[http://media.atlanis.net/blog/org-mode-screen.jpg][http://media.atlanis.net/blog/org-mode-screen.jpg]]
+    
+  - LaTeX export 
+    
+    LaTeX is a wonderful, wonderful thing. Unfortunately, it is also
+    /incredibly verbose!/ As a markup language, this level of explicitness is
+    necessary to remove ambiguity and give fine-grained control over
+    output. However, in my every-day use-case I really just want to write up my
+    homework assignments with pretty-printed math without having to worry about
+    all of that. Org-mode fills this gap by providing a much less verbose
+    markup that has well-defined semantics. It also allows embedded LaTeX code
+    so that if Org-mode is lacking support in some area, you're not out of
+    luck.
+    
+  - HTML export
+    
+    While HTML is a bit less "wonderful" than LaTeX, it is still quite
+    important. Org-mode documents can be exported to HTML in much the same
+    way as LaTeX is. In fact, this blog post was written as an Org document and
+    then exported into HTML! You can read more about how this is done in a
+    [[http://atlanis.net/blog/posts/new-site-stasis.html][previous post]].
+
+  Of course, there are /many/ other things it can do. I've only barely
+  scratched the surface of its capabilities myself. However, these functions
+  are sufficient for our usage: writing Beamer presentations in Org-mode.
+
+* Why Org-mode on top of Beamer?
+  The primary reason I use Org-mode over Beamer rather than just Beamer is
+  reduced verbosity. For example, here is a comparison of a simple presentation
+  and the resulting LaTeX output:
+
+** Org-mode
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: med-src-container
+   :END:
+#+INCLUDE: "../includes/source/sample-presentation.org" src org
+
+** LaTeX with Beamer
+   :PROPERTIES:
+   :HTML_CONTAINER_CLASS: med-src-container
+   :END:
+
+   (/*Note:* indentation was added after generation by me to make the LaTeX
+   more readable/)
+   
+#+INCLUDE: "../includes/source/sample-presentation.tex" src latex
+
+  Dunno about you, dear reader, but to me the Org-mode file looks significantly
+  easier to read/write/maintain than the LaTeX one. Org-mode used in this
+  context is fundamentally a quality-of-life change from Beamer. However, it is
+  a powerful tool in its own right.
+
+* Using Org-mode with Emacs
+
+  Now then, with the reasoning for /why/ you'd use Org-mode out of the way I
+  can move onto how to actually /use/ the damn thing! If you're already
+  comfortable with Emacs, it is very, very simple. If you aren't, then you will
+  have a bit more difficulty due to the learning curve imposed by Emacs.
+
+  Start by opening a new file for the presentation (that's =C-x C-f= for the
+  uninitiated). Provided you chose a file-name ending in =.org=, =org-mode=
+  will already be on. You will also need to turn on =org-beamer-mode= using
+  =M-x org-beamer-mode RET=. An /attribute/ can be added to the file which will
+  inform Org to start Beamer mode every time this file is opened:
+
+  #+begin_example
+  #+STARTUP: beamer
+  #+end_example
+
+  Though no further attributes /need/ to be set, there are a few others that
+  are useful in most cases:
+
+  - =#+TITLE:=
+
+    This attribute sets the title of your presentation. If it is not set, it
+    defaults to the name of the file.
+
+  - =#+AUTHOR:=
+
+    Sets the author's name. If it is not set, it defaults to your username.
+
+  - =#+DATE:=
+
+    Sets the date used by the title slide. If unset, defaults to export date.
+
+  - =#+OPTIONS:=
+
+    Sets export options. Some useful ones are =toc= and =num=, which specify
+    whether to create a Table of Contents and whether to number sections.
+
+    Boolean options use lisp-y style. For example: =toc:nil= disables the ToC,
+    while =toc:t= enables it (analogous to =nil= and =t= in both Common and
+    Emacs Lisp). These options override the user's Emacs configuration. Both
+    =toc= and =num= default to =t=.
+
+  After that, start writing! Beginning a line with =*='s creates a new
+  heading. In a LaTeX export, these are sections. Increasing the number of
+  stars creates sub-sections. For Beamer, the top-most headings are slides
+  (unless =#+OPTIONS= has =H:x= specifying another level =x= to start at) and
+  the sub-headings are treated as sub-sections of individual slides.
+
+  Once you've written for a while, you probably want to see what your work
+  looks like! Use =C-c C-e= to display all export options. From there, =l P=
+  will export a PDF version of the presentation. You can view the output either
+  by opening it manually or using the =C-c C-e l O= command (which creates and
+  opens the file). Many PDF viewers automatically reload when you regenerate
+  the PDF, which is often preferable to continuously opening and closing the
+  viewer.
+
+  More content can be written, and presentation regeneration is just a key
+  chord away.
+
+** So...What's My Workflow?
+
+   This is all well and good, but John asked about my /workflow/, not how to
+   use Org mode! My workflow is simple:
+
+   - Emacs open on one monitor, Evince open on the other
+   - Export PDF every time a not-insignificant change is made
+   - Monitor output in Evince (which refreshes every time the PDF is changed)
+
+   Very simple and straightforward, just the way I like it. While it is not
+   quite as simple as a WYSIWYG editor like PowerPoint, it integrates much
+   better into my usual development environment.
+
+* But Can I Use Org-mode for Presentations Without Emacs?
+
+  In theory, yes. The format has parsers written in other languages (Common
+  Lisp, PHP and Python are all listed on the [[http://orgmode.org/worg/org-tools/][community tools page]]) and there
+  are =vim= plugins for Org files ([[https://github.com/hsitz/VimOrganizer][VimOrganizer]] and [[https://github.com/jceb/vim-orgmode][vim-orgmode]]).
+
+  In practice, not really. The parsers are geared towards reading org documents
+  into data structures for manipulation, and the vim plugins implement only a
+  subset of the functionality. If you want to use Org mode, it is best to use
+  Emacs along with it.
+
+  If you're a vim user on the road to recovery, you should check out [[https://bling.github.io/blog/2013/10/27/emacs-as-my-leader-vim-survival-guide/][bling's
+  Emacs->Vim Survival Guide]] (also his [[https://bling.github.io/blog/2013/09/09/vim-in-emacs-bootstrap/][Emacs bootstrapping post]]).
+
+* Example Time!
+
+  Of course, all of this is moot unless you can actually generate
+  decent-looking presentations with it! That is the goal, right? Since I've
+  done a some presentations recently, I'll pull two from my stock.
+
+  - Birds of a Feather Clojure Code
+
+    I wrote [[https://github.com/emallson/bof-11-april-2014][code]] and [[https://raw.githubusercontent.com/emallson/bof-11-april-2014/master/presentation.org][slides]] for last week's BoF presentation. The PDF output of
+    the slides can be downloaded [[http://media.atlanis.net/blog/org-beamer-example-output/bof.pdf][here]]. This presentation demonstrates both
+    using LaTeX commands to override default behavior and displaying inline
+    code with syntax highlighting.
+
+    Note: the code in this presentation could have been included using
+    =#+INCLUDE=, however it was longer than the slide width and I wasn't sure
+    of a good way to do wrapping without either modifying the code directly or
+    copying it into the org file.
+
+  - Keeping Current Clojure Presentation
+
+    I also wrote [[http://media.atlanis.net/blog/clojure-presentation.org][slides]] (and [[https://github.com/emallson/comment-example][code]], but not included in the presentation) for a
+    Keeping Current presentation. The PDF output of the slides can be
+    downloaded [[http://media.atlanis.net/blog/org-beamer-example-output/keeping-current.pdf][here]]. This Org file demonstrates inline LaTeX (optional
+    =#+BEGIN/END_LaTeX= commands can be used to make it explicit) as well as
+    preventing certain parts of the document from being exported (note that the
+    /Abstract/ subtree is not exported because it has the =:noexport:=
+    tag). This feature can be used for storing speech notes with the slides
+    without having them exported alongside them.
+
+  You might note that neither of these presentations are particularly
+  pretty. However, this is because in both cases I had very little time
+  available when they were written. You can see many better-looking examples by
+  searching for =beamer presentation= on [[https://www.google.com/search?q=beamer+presentation&tbm=isch][Google Images]].
+  
+* So Should I Use Org-mode?
+  
+  Yes! At least give it a try! Org-mode has come bundled with Emacs since
+  version 22, but you can also install the latest version within Emacs via =M-x
+  package-install RET org RET=.
+
+  While I have no doubts that many people will continue to prefer PowerPoint
+  for their presentations, using Beamer with Org-mode is an effective and in
+  many cases superior alternative.

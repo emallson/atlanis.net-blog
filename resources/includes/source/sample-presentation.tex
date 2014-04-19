@@ -1,0 +1,65 @@
+% Created 2014-04-18 Fri 21:26
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usepackage{minted}
+\usepackage{microtype}
+\usetheme{default}
+\author{John Doe}
+\date{18 April 2014}
+\title{A Presentation}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.3.1 (Org mode 8.2.5h)}}
+\begin{document}
+
+\maketitle
+
+\begin{frame}[label=sec-1]{What is Beamer?}
+  \begin{itemize}
+  \item \LaTeX{} styles for presentations
+  \item Exports to PowerPoint-style presentation format
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label=sec-2]{What is Org-mode?}
+  \begin{itemize}
+  \item Emacs major-mode for organized thought
+  \item Spiritual successor to \texttt{outline-mode}
+  \item Supports wide variety of markup
+    \begin{itemize}
+    \item \emph{italic}, \alert{bold}, \texttt{code}, \verb~verbatim~, etc.
+    \item Inline \LaTeX{} (including math!)
+    \end{itemize}
+  \item Can export to \LaTeX{}, HTML, and other formats
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-3]{How Do I Work This Thing?}
+  \begin{itemize}
+  \item Edit text
+  \item Export to PDF
+    \begin{itemize}
+    \item Intermediate \LaTeX{} file is created and saved
+    \item This allows all the fine-grained tweaking of \LaTeX{} -- optionally
+    \end{itemize}
+  \item Unfortunately, the difficult bit remains: giving the presentation
+  \end{itemize}
+\end{frame}
+% Emacs 24.3.1 (Org mode 8.2.5h)
+\end{document}

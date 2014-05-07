@@ -26,7 +26,7 @@
 
 (def app
   (-> (stasis/serve-pages get-pages)
-      (optimus/wrap get-assets optimizations/all serve-live-assets)
+      (optimus/wrap get-assets optimizations/none serve-live-assets)
       wrap-content-type))
 
 (def export-directory "./build/")

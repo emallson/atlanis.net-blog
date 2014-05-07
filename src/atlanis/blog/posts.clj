@@ -42,10 +42,16 @@
      :path (str "posts/" (base-name filename true) ".html")
      :content (convert-org-to-html filename)}))
 
+(defn export?
+  "Determines whether a post should be exported"
+  [post]
+  (not (= (:export (:headers post)) "nil")))
+
 (defn get-posts
   "Gets all posts from a given directory."
   [directory]
   (->> (stasis/slurp-directory directory #"\.org$")
        (map #(get-org-post (str directory (first %)) (second %)))
+       (filter export?)
        (sort-by :date)
        (reverse)))

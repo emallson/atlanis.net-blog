@@ -1,0 +1,118 @@
+#+TITLE: A Good, Stiff Kick
+#+AUTHOR: J David Smith
+#+OPTIONS: toc:nil num:nil
+#+DATE: <2014-05-01 Thu 13:35>
+
+* The Setup
+  This semester may be the first semester that I get a grade less than an A in
+  any in-major class (read: CS, MA). I am taking the graduate-level Numerical
+  Analysis course with Dr. Wasilkowski this semester. Dr. Wasilkowski is a good
+  teacher -- I actually went out of my way to make sure I took this class with
+  him because of that and because it is his research area.
+
+  I've not done poorly by any means. My grade on the first exam was 18.75
+  / 20. I consistently earned good grades on the homework. However, I was
+  barely keeping my head above water. Having counted on my good luck and
+  general intellect to get me through without much effort, I found myself
+  wholly unprepared for the failure of both.
+
+* The Exam
+
+  The second mid-term exam had 4 problems plus an extra. We could choose any 3
+  of the normal problems and solve the extra for bonus points. The exam was
+  scored on a scale of 1-20. I solved the first two problems easily. And then I
+  bombed the third. I did not do the extra.
+
+  My mistake on the third problem was not due to lack of knowledge, but a
+  simple misunderstanding of the problem on my part. The problem wasn't
+  particularly opaque either -- everyone I spoke to had solved it with the
+  correct method. Everyone but me. I did not have the padding in my grade to
+  take such a hit. As it stands now, I am 3.2% below the requirement for an A.
+  
+* The Final
+  Dr. Wasilkowski gives his students the option to not take the final. If you
+  are happy with your grade prior to the final, you can take it as-is and skip
+  the final. If you are not, you can take the final to try to improve
+  it. There is one catch: if you take the final and do poorly, you can lower
+  your grade.
+
+  In order to raise my grade up to an A, I have to earn 38.25 / 40 points on
+  the final. My reaction upon seeing that went something like this:
+
+  #+BEGIN_VERSE
+  "I must've done something wrong"
+  "Well damn, that's high"
+  "Is that even possible?"
+  "Oops."
+  #+END_VERSE
+
+  Then I looked to see what the minimum I need to keep a B is: 28.25 / 40. I
+  can do that, it's only a minimum of ~70%. Actually, I am quite confident that
+  I could earn that without studying for the exam at all. But that isn't what I
+  want.
+
+* A Bit of Context
+  This is not the first class I've taken with Wasilkowski. Previously, I had
+  taken the CS Discrete Math course under him. (This was how I knew prior to
+  registration that he was a good professor). In that class, he gave out quite
+  a lot of extra credit. One person even managed to earn /140%/ as their
+  overall grade -- though he would not say who. I did quite well on the exams,
+  and was easily able to qualify for skipping the final with an A.
+
+* The Kick
+  Today, I went to his office hours for advice. Up to this point I had been
+  leaning towards taking the exam, but I wanted to know what he thought about
+  taking the exam vs not. After listening to my explanation, he told me that he
+  couldn't give me advice -- it had to be my own decision. Then he said
+  something like this:
+
+  #+BEGIN_QUOTE
+  You know, I was really disappointed with your performance this semester. You
+  have a lot of potential, you were one of the best students in my other class,
+  but I didn't see the effort this semester.
+  #+END_QUOTE
+
+  Boom. I have a lot of respect for Dr. Wasilkowski and his opinion, so I take
+  what he says seriously. And he's right, ya ken? I haven't put the effort in
+  this semester. I haven't been sufficiently familiar with the material, I've
+  spent far more time on reddit (in and out of class) than in previous
+  semesters, and I have relied far too much on luck.
+
+* My Semester in Review
+  Throughout this semester, I have been frustrated by my performance. I screwed
+  up the first homework, but have made up for it. During the first exam, I
+  wrote more guesses than answers. Still, I got a very good grade. Yet it
+  always feels weird to be the hat that Indy grabs from under the door:
+  scraping through no worse for the wear, but not by one's own doing. I mean,
+  technically it was my own doing, but I have put forth very little effort in
+  this class and most others this semester.
+
+  The only extra credit I've earned has been from turning in well-formatted &
+  printed rather than handwritten homework. I did not even attempt most of the
+  extra credit problems; minimum effort was all I gave. That's a big part of my
+  present problem.
+
+  Two contributing factors are general tiredness and a simple experiment that I
+  took far too long to give up. Tiredness is easy to understand, as I have a
+  lot of stuff to do and just enough time to do it. However, my little
+  experiment ended up hurting more than I had anticipated: I used my phone (a
+  phablet) as a notebook. Digital distractions abound. One moment I'm taking
+  notes -- then suddenly class is over, I don't remember anything from that
+  lecture and my notes are horrifyingly incomplete. Oops. Ultimately, these are
+  both excuses, and the fault still lies with me.
+
+* My Resolve
+  As I left his office, I turned and told him that I was going to take the
+  exam. I have resolved to both take the exam, but also to ace it. Will I fail?
+  Probably -- I am prone to silly little errors -- but I will try. Even if I do
+  fail, I am no worse off.
+
+  I am thankful for teachers like Dr. Wasilkowski. He is an excellent teacher,
+  to be sure. Energetic, interesting, funny (he tells the best jokes that I've
+  ever heard from a teacher) while still covering the material clearly. It is
+  easier to pay attention in his classes than in any other I've been
+  in. Clearly, he also isn't afraid to teach outside of the classroom -- even
+  when it involves a stern rebuke. More than his in-class capabilities, I am
+  thankful for that. Sometimes a stiff kick in the gut is good to bring me to
+  my senses. And by sometimes I mean often. And by often I mean pretty much
+  always. Without the pretty much. So just always? Yea, always.

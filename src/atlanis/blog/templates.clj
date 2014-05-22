@@ -53,6 +53,32 @@
                                    (set-attr :href (str config/site-root (:path post)))
                                    (content (date-formatter (:date post))))))
 
+(defsnippet post-page (snip "templates/post-page.html")
+  [root] [posts page-number num-pages]
+  [:article.post] (clone-for 
+                   [post posts]
+                   [:h1.entry-title :a] (do->
+                                         (set-attr :href (str config/site-root (:path post)))
+                                         (content (:title post)))
+                   [:div#content] (do->
+                                   (remove-attr :id) 
+                                   (content (html-snippet (:content post))))
+                   [:a#comments-link] (do->
+                                       (remove-attr :id)
+                                       (set-attr :href (str config/site-root (:path post) "#disqus_thread")))
+                   [:a#timestamp] (do->
+                                   (remove-attr :id)
+                                   (set-attr :href (str config/site-root (:path post)))
+                                   (content (date-formatter (:date post)))))
+  [:a#btn-newer-posts] #(when (> page-number 1)
+                          (let [f (do->
+                                   (set-attr :href (str config/site-root "page/" (dec page-number) ".html")))]
+                            (f %)))
+  [:a#btn-older-posts] #(when (< page-number num-pages)
+                          (let [f (do->
+                                   (set-attr :href (str config/site-root "page/" (inc page-number) ".html")))]
+                            (f %))))
+
 (defsnippet one-post (snip "templates/one-post.html")
   [root] [post next-post]
   [:h1.entry-title] (content (:title post))

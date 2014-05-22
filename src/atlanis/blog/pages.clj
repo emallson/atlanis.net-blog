@@ -1,5 +1,6 @@
 (ns atlanis.blog.pages
   (:require [atlanis.blog.templates :as tpl]
+            [atlanis.blog.rss :as rss]
             [atlanis.blog.config :as config]
             [stasis.core :as stasis]))
 
@@ -30,6 +31,7 @@
   (stasis/merge-page-sources
    (let [paginated (partition-all config/page-size posts)]
      {:general-pages {"/index.html" (create-page #(tpl/post-page (first paginated) 1
-                                                                 (count paginated)))}
+                                                                 (count paginated)))
+                      "/atom.xml" (rss/atom-xml posts)}
       :pages (post-pages paginated)
       :posts (single-posts posts)})))

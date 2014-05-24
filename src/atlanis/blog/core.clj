@@ -17,9 +17,24 @@
    (assets/load-bundle "public" "/styles.css" ["/styles/syntax.css"
                                                "/styles/syntax-tweaks.css"])))
 
+
+
+(defn now
+  []
+  (java.util.Date.))
+
+(defn unix-time
+  [date]
+  (.getTime date))
+
+(def last-update (atom 0))
+(def old-posts (atom {}))
+
 (defn load-posts
   []
-  (posts/get-posts "resources/posts/"))
+  (let [posts (posts/get-posts "resources/posts/" @last-update)]
+    (reset! last-update (unix-time (now)))
+    (swap! old-posts merge posts)))
 
 (defn get-pages
   [config]
@@ -34,10 +49,11 @@
 
 (defn export
   [config]
-  (let [assets ((:optimizations config) (get-assets) {})]
+  (let [pages (get-pages config),
+        assets ((:optimizations config) (get-assets) {})]
     (stasis/empty-directory! (:export-directory config))
     (optimus.export/save-assets assets (:export-directory config))
-    (stasis/export-pages (get-pages config) (:export-directory config) {:optimus-assets assets})))
+    (stasis/export-pages pages (:export-directory config) {:optimus-assets assets})))
 
 (defn -main
   [conf-section]

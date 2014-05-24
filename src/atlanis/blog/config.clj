@@ -4,12 +4,12 @@
 (defn pwd []
   (System/getProperty "user.dir"))
 
-(def config {:production {:root "http://atlanis.net/blog/"
+(def config {:production {:root "http://atlanis.net/blog"
                           :optimizations optimizations/all
                           :export-directory "./build/production/"}
-             :development {:root (str "file://" (pwd) "/build/development/")
+             :development {:root (str "file://" (pwd) "/build/development")
                            :optimizations optimizations/none
                            :export-directory "./build/development/"}
-             :ring {:root "/"
+             :ring {:root "http://localhost:3000"
                     :optimizations optimizations/none
                     :export-directory "./build/ring/"}})

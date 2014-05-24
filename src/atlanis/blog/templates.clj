@@ -8,7 +8,7 @@
 (defn- stylesheet-link
   "Creates a <link> tag to a stylesheet."
   [path config]
-  {:tag :link, :attrs {:rel "stylesheet" :href (str (:root config) (subs path 1))}})
+  {:tag :link, :attrs {:rel "stylesheet" :href (str (:root config) path)}})
 
 (defn- inline-script
   "Creates an inline <script> tag."
@@ -37,7 +37,9 @@
 (defsnippet all-posts (snip "templates/all-posts.html")
   [root] [posts config]
   [:article.post] (clone-for 
-                   [post posts]
+                   [[_ post] (->> posts
+                                  (sort-by #(:date (second %)))
+                                  (reverse))]
                    [:h1.entry-title :a] (do->
                                          (set-attr :href (str (:root config) (:path post)))
                                         (content (:title post)))
@@ -53,7 +55,7 @@
                                    (content (date-formatter (:date post))))))
 
 (defsnippet one-post (snip "templates/one-post.html")
-  [root] [post next-post config]
+  [root] [[_ post] [_ next-post] config]
   [:h1.entry-title] (content (:title post))
   [:div#content] (do->
                   (remove-attr :id)

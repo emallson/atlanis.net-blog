@@ -1,5 +1,9 @@
 .post-date:before {
-    content: '';
+    content: none;
+}
+
+.post-date {
+    text-decoration: none;
 }
 
 .right {
@@ -22,4 +26,8 @@ iframe.twitter-tweet {
 /* Used to give fixed maximum heights to potentially long output files */
 div.med-src-container pre.src {
     max-height: 900px;
+}
+
+.comments-link:before {
+    content: none;
 }

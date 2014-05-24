@@ -1,5 +1,6 @@
 (ns atlanis.blog.core
   (:require [ring.middleware.content-type :refer [wrap-content-type]]
+            [ring.util.response :refer [charset]]
             [clojure.string :as str]
             [stasis.core :as stasis]
             [optimus.assets :as assets]
@@ -17,35 +18,23 @@
    (assets/load-bundle "public" "/styles.css" ["/styles/syntax.css"
                                                "/styles/syntax-tweaks.css"])))
 
-
-
-(defn now
-  []
-  (java.util.Date.))
-
-(defn unix-time
-  [date]
-  (.getTime date))
-
-(def last-update (atom 0))
-(def old-posts (atom {}))
-
-(defn load-posts
-  []
-  (let [posts (posts/get-posts "resources/posts/" @last-update)]
-    (reset! last-update (unix-time (now)))
-    (swap! old-posts merge posts)))
-
 (defn get-pages
   [config]
   (require 'atlanis.blog.templates :reload)
-  (pages/get-pages (load-posts) config))
+  (pages/get-pages (posts/load-posts) config))
+
+(defn wrap-charset
+  [handler charset-val]
+  (fn [req]
+    (if-let [resp (handler req)]
+      (charset resp charset-val))))
 
 (def app
   (let [config (:ring config)]
     (-> (stasis/serve-pages #(get-pages config))
         (optimus/wrap get-assets (:optimizations config) serve-live-assets)
-        wrap-content-type)))
+        wrap-content-type
+        (wrap-charset "UTF-8"))))
 
 (defn export
   [config]

@@ -34,38 +34,31 @@
   [path]
   (html-snippet (slurp (io/resource path))))
 
+(defsnippet post-body (snip "templates/post-body.html")
+  [root] [post]
+  [:h1.entry-title] (content (:title post))
+  [:div.entry-content] (content (html-snippet (:content post)))
+  [:a.post-date] (content (date-formatter (:date post))))
+
 (defsnippet all-posts (snip "templates/all-posts.html")
   [root] [posts config]
   [:article.post] (clone-for 
                    [[_ post] (->> posts
                                   (sort-by #(:date (second %)))
                                   (reverse))]
-                   [:h1.entry-title :a] (do->
-                                         (set-attr :href (str (:root config) (:path post)))
-                                        (content (:title post)))
-                   [:div#content] (do->
-                                   (remove-attr :id) 
-                                   (content (html-snippet (:content post))))
-                   [:a#comments-link] (do->
-                                       (remove-attr :id)
-                                       (set-attr :href (str (:root config) (:path post) "#disqus_thread")))
-                   [:a#timestamp] (do->
-                                   (remove-attr :id)
-                                   (set-attr :href (str (:root config) (:path post)))
-                                   (content (date-formatter (:date post))))))
+                   (let [link (str (:root config) (:path post))]
+                     (content (at (post-body post)
+                                  [:h1.entry-title] (do->
+                                                     unwrap
+                                                     (wrap :a {:class "entry-title-link"})
+                                                     (wrap :h1 {:class "entry-title"}))
+                                  #{[:a.post-date]
+                                    [:a.entry-title-link]} (set-attr :href link)
+                                    [:a.comments-link] (set-attr :href (str link "#comments")))))))
 
 (defsnippet one-post (snip "templates/one-post.html")
-  [root] [[_ post] [_ next-post] config]
-  [:h1.entry-title] (content (:title post))
-  [:div#content] (do->
-                  (remove-attr :id)
-                  (content (html-snippet (:content post))))
-  [:span#timestamp] (do->
-                  (remove-attr :id)
-                  (content (date-formatter (:date post))))
-  [:a#more] (do->
-             (remove-attr :id)
-             (set-attr :href (str (:root config) (:path next-post)))
-             (content (if next-post "Next Post")))
+  [root] [[_ post] config]
+  [:article.post] (prepend (at (post-body post)
+                               [:a.comments-link] nil))
   [:input#disqus_identifier] (set-attr :value (:name post))
   [:input#disqus_url] (set-attr :value (str (:root config) (:path post))))

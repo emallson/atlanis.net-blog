@@ -57,3 +57,20 @@
           (map #(get-org-post (str directory (first %)) (second %)))
           (map (fn [_] [(:filename _) _]))
           (into {}))))
+
+(defn now
+  []
+  (java.util.Date.))
+
+(defn unix-time
+  [date]
+  (.getTime date))
+
+(def last-update (atom 0))
+(def old-posts (atom {}))
+
+(defn load-posts
+  []
+  (let [posts (get-posts "resources/posts/" @last-update)]
+    (reset! last-update (unix-time (now)))
+    (swap! old-posts merge posts)))

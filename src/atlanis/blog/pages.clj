@@ -14,10 +14,9 @@
 (defn- single-posts
   [posts config]
   (->> posts
-       (partition-all 2 1)
-       (map (fn [[post next-post]]
+       (map (fn [post]
               [(:path (second post))
-               (create-page #(tpl/one-post post next-post config) config)]))
+               (create-page #(tpl/one-post post config) config)]))
        (into {})))
 
 (defn get-pages [posts config]

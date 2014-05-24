@@ -1,0 +1,118 @@
+#+TITLE: Wot I Think: Heroes of the Storm Technical Alpha
+#+AUTHOR: J David Smith
+#+DATE: <2014-05-23 Fri 14:13>
+#+OPTIONS: toc:nil num:nil
+
+* Preface
+
+  Right as I was ramping up my studies for finals, I got an email from Blizzard
+  informing me that I'd been selected for the /Heroes of the Storm/ Technical
+  Alpha. "Fantastic!" I thought to myself, "and perfect timing, to boot! I need
+  more distractions this week!" So I put off installing it like the boring,
+  responsible student I am.
+
+  Once I had survived finals (with all A's, no less! ^.^), I got the download
+  going. Gotta say one thing: getting setup for Blizzard alpha/beta games is
+  super-easy with their unified launcher. I literally just clicked 'Install',
+  selected a location, and was done save for the download itself.
+
+  As I'm going through wot I think of the game so far, keep in mind that it's
+  still in Technical Alpha. Also, I've only played somewhere between 20 and 30
+  games so far: enough for a 'First Impressions' but not a full-on review.
+
+* Presentation
+
+  One of Blizzard's strong points has always been their excellent
+  presentation. Due to artwork that relies heavily on stylization over poly
+  counts, their games tend to look surprisingly good even on low-end hardware. 
+
+** Performance
+
+   The system I'm playing on is getting a bit dated. The important specs are:
+
+   - Intel Core 2 Quad 2.66 GHz
+   - 4GB DDR3 RAM
+   - nVidia 560 GTX
+
+   Passable, but not particularly powerful. I have been playing the game on
+   Medium or High settings depending on the match. Performance has varied
+   from match to match, but overall has been very good -- most of the
+   time. Some +champions+ heroes hurt my framerate more than others; the
+   difference makes sense, as some (ex: Diablo) are much more particle-heavy
+   than others (ex: Nova). Considering that this is an alpha, I was pleasantly
+   surprised at the generally consistent framerates.
+
+** Graphics & Style
+
+   Blizzard has continued in their path of very stylized graphics. While some
+   models seem more-or-less ripped from their respective games on the surface,
+   the ones I've seen appear to have been tweaked to better fit the style of
+   the game. That said, it will *always* look funny to see Diablo riding a
+   horse. Poor horse.
+
+** Sound
+
+* Gameplay
+
+   While on the surface /Heart of the Storm/ is quite similar to other
+   contemporary MOBAs, the similarities are only at the mechanical level. The
+   game is played in 5v5 competitive matches from an isometric perspective with
+   RTS-style click-to-move controls. The core gameplay is roughly the same as
+   /League of Legends/ or /Defense of the Ancients/. However, several systems
+   changes have dramatically altered the dynamic.
+
+** Prepare to be Broke
+
+   The first of these is removal of gold as a resource. This has the effect of
+   reducing the snowball effect. While snowballing still occurs for reasons
+   I'll discuss in a moment, it is not nearly as severe as in /LoL/ or
+   /DotA/. The removal of this system entirely has not been without
+   controversy. However, it has received a suitable replacement for
+   customization in the Talent system.
+
+** Talented, Aren't We?
+
+   Every few levels (starting at 1), players are given the option of 2-4
+   talents. These range from passives like /Path of the Wizard/, which grants
+   increased mana and mana regeneration, to the choice of +Ultimate+ Heroic
+   abilities at level 6. Players are not able to change talents during a match
+   -- only choose them -- but they are reset after every match, in classic MOBA
+   style.
+
+   I should make it clear that the talents are chosen in a style similar to
+   /WoW/'s current system: you are given 2-4 choices and must take one (and
+   only one). You can't take 2 from tier 1 and none from tier 2 or any of that
+   chicanery. Come to think, I should test and see what happens if I don't take
+   any talents when more are offered. 
+
+   With this system, experience has effectively replaced gold as the currency
+   du jour. Talents offer raw stat buffs as well as interesting active effects
+   (such as Malfurion t2 offering an OP as fuck shield spell). However, this
+   means that we won't ever see crazy builds like AP Rengar. Then again, I
+   would be much happier if I'd never had to deal with the BS that was AP
+   Yi. Win some, lose some.
+
+** Team-wide Experience
+
+   Another important change is Blizzard's move from per-hero experience to
+   per-team experience. No hero (even those AFK) is left behind in this
+   system. However, it does make it so that a bad player can impact your
+   performance much more quickly. Both player and minion kills give experience
+   -- but only if someone on your team is in range. Therefore, if another lane
+   is feeding then not only is their lane gaining an advantage, but yours is as
+   well. Additionally, because the feeding lane is going to spend more time
+   dead (and thus away from the creeps) your entire team will fall behind in
+   experience.
+
+   This isn't as disastrous as it sounds. The most significant difference I've
+   ever seen in levels is 4. I've heard that there are catch-up mechanics in
+   place, but I've not done the research to confirm or deny this
+   hearsay. Regardless, being 4 levels behind is about as bad as being 4 levels
+   behind in /LoL/: painful, but not insurmountable. It's nowhere near "our bot
+   lane went 0-20 in 10 minutes" bad, as the occasional /LoL/ game will be.
+
+** Maps
+
+** Balance
+
+* Conclusion

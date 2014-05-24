@@ -3,19 +3,19 @@
             [stasis.core :as stasis]))
 
 (defn- create-page
-  [f]
-  (fn [context] (apply str (tpl/layout context (f)))))
+  [f config]
+  (fn [context] (apply str (tpl/layout context (f) config))))
 
 (defn- single-posts
-  [posts]
+  [posts config]
   (->> posts
        (partition-all 2 1)
        (map (fn [[post next-post]]
               [(:path post)
-               (create-page #(tpl/one-post post next-post))]))
+               (create-page #(tpl/one-post post next-post config) config)]))
        (into {})))
 
-(defn get-pages [posts]
+(defn get-pages [posts config]
   (stasis/merge-page-sources
-   {:general-pages {"/index.html" (create-page #(tpl/all-posts posts))}
-    :posts (single-posts posts)}))
+   {:general-pages {"/index.html" (create-page #(tpl/all-posts posts config) config)}
+    :posts (single-posts posts config)}))

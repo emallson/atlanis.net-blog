@@ -3,8 +3,6 @@
 #+DATE: <2014-05-23 Fri 14:13>
 #+OPTIONS: toc:nil num:nil
 
-* Preface
-
   Right as I was ramping up my studies for finals, I got an email from Blizzard
   informing me that I'd been selected for the /Heroes of the Storm/ Technical
   Alpha. "Fantastic!" I thought to myself, "and perfect timing, to boot! I need
@@ -12,7 +10,7 @@
   responsible student I am.
 
   Once I had survived finals (with all A's, no less! ^.^), I got the download
-  going. Gotta say one thing: getting setup for Blizzard alpha/beta games is
+  going. Gotta say one thing: getting set up for Blizzard alpha/beta games is
   super-easy with their unified launcher. I literally just clicked 'Install',
   selected a location, and was done save for the download itself.
 
@@ -92,6 +90,11 @@
    would be much happier if I'd never had to deal with the BS that was AP
    Yi. Win some, lose some.
 
+   Overall, I'm pretty excited about the talent system. I don't feel like it
+   restricts my options much during play, while it eases the introductory
+   learning curve significantly and has potential to reduce the frequency of
+   significant balance issues.
+
 ** Team-wide Experience
 
    Another important change is Blizzard's move from per-hero experience to
@@ -112,6 +115,57 @@
    lane went 0-20 in 10 minutes" bad, as the occasional /LoL/ game will be.
 
 ** Maps
+
+   The map design and implementation is also considerably different from
+   classic MOBAs. Where /LoL/ and /DotA/ effectively have only one map with
+   only one mode, /HotS/ has 4 as of this writing -- each with its own
+   secondary objectives. This is similar to how /Guild Wars 2/ has several
+   different maps with the same primary objective (king-of-the-kill; win at 500
+   points) but disparate secondary objectives (kill boss mobs for extra points,
+   invade enemy base for lots of points, control catapults).
+
+   The primary objective is the same as in /LoL/ / /DotA/: destroy the enemy
+   +ancient+ +nexus+ core. The method of attaining this objective is, again,
+   similar: farm and push. However, there is a significant twist common to all
+   maps: mercenaries.
+
+** This Ain't Your Daddy's Jungle
+
+   Where /LoL/ / /DotA/ (henceforth abbreviated as /LotA/) have neutral camps
+   scattered in the 'jungle' between the lanes, /HotS/ has Mercenary
+   camps. These camps are significantly more difficult than their counterparts
+   in /LotA/, but they do not scale in level as the game progresses like they
+   do in /LoL/. When a camp is killed, a capture point becomes
+   available. Obtaining control of this point will spawn a band of mercenaries
+   that will push on your team's behalf and put the camp on a ~3 minute
+   cooldown.
+
+   What results is a pretty clever solution to the game length problem: pushing
+   becomes considerably easier as the game progresses without snowballing
+   causing one team to dominate the other in team-fights. Adding in secondary
+   objectives is really just icing on the cake -- I'd be happy to play a mode
+   lacking them.
+
+   The secondary objectives in /HotS/ are varied enough that -- provided the
+   RNGods favor you -- the game stays fresh even when playing the same hero
+   over and over again. One map features two shrines that, when controlled by
+   your team, allow one team-member to transform into a powerful
+   dragon. Another has players traveling under the map in a mine full of
+   undead, collecting skulls to summon powerful golems. Yet another asks us to
+   fight mercenary camps and bust open treasure chests to pay a greedy pirate
+   captain to bombard the enemy base with his cannons. While some still need
+   tuning (it is very difficult to come back from being hit with a team-wide
+   curse that reduces all of your creeps' HP to 1, reduces structure HP by
+   half, prevents turrets from firing, and prevents natural HP regeneration),
+   they certainly provide interesting gameplay.
+
+   Notably lacking right now is a Starcraft-themed map. The others are
+   fantasy-themed -- not even really Warcraft- or Diablo-themed, which is kind
+   of disappointing. This is one area that I feel /Heart of the Storm/ is
+   really lacking in right now. While the characters belong to well-defined
+   universes, the maps don't really belong anywhere. I'd like to see the
+   existing maps changed to fit better into one of the existing Blizzard
+   universes. This would make the game as a whole feel more cohesive.
 
 ** Balance
 

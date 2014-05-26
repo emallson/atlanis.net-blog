@@ -28,6 +28,14 @@ div.med-src-container pre.src {
     max-height: 900px;
 }
 
+div#pager a {
+    text-decoration: none;
+}
+
+div#pager {
+    text-align: center;
+}
+
 .comments-link:before {
     content: none;
 }

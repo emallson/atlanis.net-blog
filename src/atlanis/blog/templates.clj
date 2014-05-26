@@ -43,9 +43,7 @@
 (defsnippet all-posts (snip "templates/all-posts.html")
   [root] [posts config]
   [:article.post] (clone-for 
-                   [[_ post] (->> posts
-                                  (sort-by #(:date (second %)))
-                                  (reverse))]
+                   [[_ post] posts]
                    (let [link (str (:root config) (:path post))]
                      (content (at (post-body post)
                                   [:h1.entry-title] (do->
@@ -54,7 +52,19 @@
                                                      (wrap :h1 {:class "entry-title"}))
                                   #{[:a.post-date]
                                     [:a.entry-title-link]} (set-attr :href link)
-                                    [:a.comments-link] (set-attr :href (str link "#comments")))))))
+                                    [:a.comments-link] (set-attr :href (str link "#disqus_thread")))))))
+
+(defsnippet post-page (snip "templates/post-page.html")
+  [root] [posts page-number num-pages config]
+  [:article.post] (substitute (all-posts posts config))
+  [:a#btn-newer-posts] #(when (> page-number 1)
+                          (let [f (do->
+                                   (set-attr :href (str (:root config) "/page/" (dec page-number) ".html")))]
+                            (f %)))
+  [:a#btn-older-posts] #(when (< page-number num-pages)
+                          (let [f (do->
+                                   (set-attr :href (str (:root config) "/page/" (inc page-number) ".html")))]
+                            (f %))))
 
 (defsnippet one-post (snip "templates/one-post.html")
   [root] [[_ post] config]

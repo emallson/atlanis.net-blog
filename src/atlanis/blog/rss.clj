@@ -22,4 +22,4 @@
      [:updated (-> posts first :date)]
      [:title {:type "text"} "Record of Motion"]
      [:link {:rel "self" :href (str (:root config) "atom.xml")}]
-     (map #(entry % config) posts)])))
+     (map #(entry (second %) config) posts)])))

@@ -2,6 +2,7 @@
 #+AUTHOR: J David Smith
 #+DATE: <2014-05-23 Fri 14:13>
 #+OPTIONS: toc:nil num:nil
+#+EXPORT: nil
 
   Right as I was ramping up my studies for finals, I got an email from Blizzard
   informing me that I'd been selected for the /Heroes of the Storm/ Technical
@@ -168,5 +169,49 @@
    universes. This would make the game as a whole feel more cohesive.
 
 ** Balance
+
+   MOBA games tend towards a certain balance level at early stages of
+   development. /Heroes of Newerth/, as an example, was more-or-less balanced
+   with the exception of a handful of heroes that were completely over the
+   top. In my experience, this is pretty common. The underlying mechanics are
+   well-understood, but it is still quite easy to over-tune a hero and turn it
+   into a walking murder machine.
+
+   /Heart of the Storm/ does not have this in my experience. Certain map
+   mechanics need re-balancing right now (Undead Mines and Curse of the Raven
+   Lord), but I've never seen a hero that just made me shout "that is
+   bullshit!" -- except for Nova.
+
+** The Stealth Problem
+
+   Nova has a lot of things going for her: decoys, stealth, high damage, high
+   range. Meanwhile, she is super-squishy to help balance things out. This
+   would normally work fine, except for stealth. In /HotS/, stealth works like
+   its /Starcraft II/ incarnation: predator-style shimmer around you, not true
+   invisibility. Stealth automatically activates after 2 seconds of not taking
+   damage.
+
+   *2 seconds*
+
+   This is only a problem because there is not a good way to stick on her for
+   many heroes. One bad choice by the pathing algorithm pretty much means that
+   she's gone unless you're ranged or have a low-cooldown gap closer (because
+   you probably blew it to reach her the first time). Even this wouldn't be a
+   problem if the stealth worked entirely as advertised.
+
+   This kind of stealth is really cool in concept, except that it suffers from
+   a very odd problem: what to do on low-power machines. The predator-style
+   effects are expensive. Thus, there are three choices Blizzard could make
+   about this:
+
+   1. Leave them on for all machines, potentially causing significant FPS loss
+      on low-power machines.
+   2. Turn them off on low-power machines, turning stealth into true
+      invisibility.
+   3. Swap them for a cheaper but less subtle effect on low-power machines,
+      making stealth less reliable against people playing on the lowest
+      setting.
+
+   I am honestly not sure which one Blizzard is using right now.
 
 * Conclusion

@@ -20,7 +20,7 @@ at lines? Therefore, I make the following proposals:
 
   For example:
 
-  #+BEGIN_SRC
+  #+BEGIN_SRC emacs-lisp
   (defun foo (x y)
     (+ x y))
 
@@ -30,7 +30,7 @@ at lines? Therefore, I make the following proposals:
 
   Becomes:
 
-  #+BEGIN_SRC
+  #+BEGIN_SRC emacs-lisp
   (defun foo (x y)
     (+ x y))
   #+END_SRC

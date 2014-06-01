@@ -1,6 +1,6 @@
-.post-date:before {
-    content: none;
-}
+/* .post-date:before { */
+/*     content: none; */
+/* } */
 
 .post-date {
     text-decoration: none;
@@ -38,4 +38,10 @@ div#pager {
 
 .comments-link:before {
     content: none;
+}
+
+pre {
+    color: #DCDCCC;
+    background-color: #3F3F3F;
+    font-family: "Source Code Pro";
 }

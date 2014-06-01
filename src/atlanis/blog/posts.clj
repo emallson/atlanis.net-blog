@@ -24,6 +24,8 @@
   "(progn
      (load \"~/.emacs.d/custom.el\")
      (package-initialize)
+     (add-to-list 'custom-theme-load-path \"~/.emacs.d/themes\")
+     (load-theme 'zenburn t)
      (require 'org)
      (find-file \"%f\")
      (setq org-confirm-babel-evaluate nil)

@@ -12,30 +12,18 @@
 (defn get-org-headers
   "Gets the #+STUFF headers from an Org file. Returns a hash-map of them."
   [content]
-  (apply 
-   hash-map 
+  (apply
+   hash-map
    (flatten
     (map (fn [row] [(keyword (clojure.string/lower-case (second row))) (nth row 2)])
          (re-seq #"(?m)^\s*#\+(\w+):\s*(.+)$" content)))))
 
 (def org-date-formatter (formatter "'<'yyyy-MM-dd EEE HH:mm'>'"))
 
-(def org-export-command
-  "(progn
-     (load \"~/.emacs.d/custom.el\")
-     (package-initialize)
-     (add-to-list 'custom-theme-load-path \"~/.emacs.d/themes\")
-     (load-theme 'zenburn t)
-     (require 'org)
-     (find-file \"%f\")
-     (setq org-confirm-babel-evaluate nil)
-     (org-html-export-as-html nil nil nil t)
-     (princ (buffer-string)))")
-
 (defn convert-org-to-html
   "Converts an Org file to HTML using the user's local emacs installation."
   [filename]
-  (:out (sh "emacs" "--batch" "--eval" (clojure.string/replace org-export-command #"%f" filename))))
+  (:out (sh "emacs" "--batch" "--script" "resources/export-post.el" filename)))
 
 (defn get-org-post
   "Gets a post from an Org file."
@@ -44,7 +32,7 @@
   (let [headers (get-org-headers content)]
     {:headers headers
      :modified (last-modified filename)
-     :filename filename 
+     :filename filename
      :title (:title headers)
      :date (parse org-date-formatter (:date headers))
      :path (str "/posts/" (base-name filename true) ".html")

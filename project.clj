@@ -1,6 +1,6 @@
 (defproject atlanis.blog "0.1"
   :description "atlanis.net blog using stasis"
-  :url "http://atlanis.net/blog/"
+  :url "https://atlanis.net/blog/"
   :license {:name "GNU General Public License v3"
             :url "https://www.gnu.org/licenses/gpl-3.0-standalone.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]

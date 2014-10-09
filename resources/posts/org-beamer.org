@@ -10,7 +10,7 @@ this down! So here I am, writing this post. It ought to be useful to more than
 just Dr. Calvert though -- so if you're not him keep reading anyway!
 
 * What is Beamer?
-  
+
   [[https://bitbucket.org/rivanvx/beamer/wiki/Home][Beamer's official site]] sums up the advantages and disadvantages of using
   Beamer fairly well, so I'll let it speak for itself:
 
@@ -32,8 +32,8 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   versus LaTeX, then you are familiar with them for PowerPoint versus
   Beamer. Beamer is /not/ well-suited to every presentation. However, it is
   very powerful for math-heavy or code-oriented presentations because of how
-  the equations and source can be embedded into LaTeX. 
-  
+  the equations and source can be embedded into LaTeX.
+
 * What is Org-mode?
   According to [[http://orgmode.org][the official site]], Org-mode is an Emacs major mode for
   "keeping notes, maintaining TODO lists, and doing project planning with a
@@ -41,7 +41,7 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   ones I use most are:
 
   - Structured editing
-    
+
     Org-mode is a successor to things like =outline-mode=, which (as the name
     suggests) was/is used for outlining. Org-mode extends it in many, many
     ways. I won't list them all. You can find a feature list [[http://orgmode.org/features.html][here]].
@@ -55,10 +55,10 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
     that section (=C-x n w= will widen the buffer back to the entire file).
 
     #+ATTR_HTML: :width 400 :class img-center
-    [[http://media.atlanis.net/blog/org-mode-screen.jpg]]
-    
-  - LaTeX export 
-    
+    [[https://atlanis.net/media/blog/org-mode-screen.jpg]]
+
+  - LaTeX export
+
     LaTeX is a wonderful, wonderful thing. Unfortunately, it is also
     /incredibly verbose!/ As a markup language, this level of explicitness is
     necessary to remove ambiguity and give fine-grained control over
@@ -68,9 +68,9 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
     markup that has well-defined semantics. It also allows embedded LaTeX code
     so that if Org-mode is lacking support in some area, you're not out of
     luck.
-    
+
   - HTML export
-    
+
     While HTML is a bit less "wonderful" than LaTeX, it is still quite
     important. Org-mode documents can be exported to HTML in much the same
     way as LaTeX is. In fact, [[https://github.com/emallson/atlanis.net-blog/blob/master/resources/posts/org-beamer.org][this blog post]] was written as an Org document and
@@ -99,7 +99,7 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
 
    (/*Note:* indentation was added after generation by me to make the LaTeX
    more readable/)
-   
+
 #+INCLUDE: "../includes/source/sample-presentation.tex" src latex
 
   Dunno about you, dear reader, but to me the Org-mode file looks significantly
@@ -207,7 +207,7 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   - Birds of a Feather Clojure Code
 
     I wrote [[https://github.com/emallson/bof-11-april-2014][code]] and [[https://raw.githubusercontent.com/emallson/bof-11-april-2014/master/presentation.org][slides]] for last week's BoF presentation. The PDF output of
-    the slides can be downloaded [[http://media.atlanis.net/blog/org-beamer-example-output/bof.pdf][here]]. This presentation demonstrates both
+    the slides can be downloaded [[https://atlanis.net/media/blog/org-beamer-example-output/bof.pdf][here]]. This presentation demonstrates both
     using LaTeX commands to override default behavior and displaying inline
     code with syntax highlighting.
 
@@ -219,20 +219,20 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
 
   - Keeping Current Clojure Presentation
 
-    I also wrote [[http://media.atlanis.net/blog/clojure-presentation.org][slides]] (and [[https://github.com/emallson/comment-example][code]], but not included in the presentation) for a
+    I also wrote [[https://atlanis.net/media/blog/clojure-presentation.org][slides]] (and [[https://github.com/emallson/comment-example][code]], but not included in the presentation) for a
     Keeping Current presentation. The PDF output of the slides can be
-    downloaded [[http://media.atlanis.net/blog/org-beamer-example-output/keeping-current.pdf][here]]. This Org file demonstrates inline LaTeX (optional
+    downloaded [[https://atlanis.net/media/blog/org-beamer-example-output/keeping-current.pdf][here]]. This Org file demonstrates inline LaTeX (optional
     =#+BEGIN/END_LaTeX= commands can be used to make it explicit) as well as
     preventing certain parts of the document from being exported (note that the
     /Abstract/ subtree is not exported because it has the =:noexport:=
     tag). This feature can be used for storing speech notes with the slides
     without having them exported alongside them.
-    
+
   - Biographical Slide for Internship
-    
+
     As part of my upcoming summer internship, I was asked to put together a
-    slide giving a brief biography. This was done [[http://media.atlanis.net/blog/ibm_bio_slide.org][as an Org document]]. The PDF
-    output can be viewed [[http://media.atlanis.net/blog/org-beamer-example-output/ibm_bio_slide.pdf][here]]. This example demonstrates using columns and
+    slide giving a brief biography. This was done [[https://atlanis.net/media/blog/ibm_bio_slide.org][as an Org document]]. The PDF
+    output can be viewed [[https://atlanis.net/media/blog/org-beamer-example-output/ibm_bio_slide.pdf][here]]. This example demonstrates using columns and
     embedding images.
 
   You might note that neither of these presentations are particularly
@@ -240,9 +240,9 @@ just Dr. Calvert though -- so if you're not him keep reading anyway!
   available when they were written and so used the default Beamer template. You
   can see many better-looking examples by searching for =beamer presentation=
   on [[https://www.google.com/search?q=beamer+presentation&tbm=isch][Google Images]].
-  
+
 * So Should I Use Org-mode?
-  
+
   Yes! At least give it a try! Org-mode has come bundled with Emacs since
   version 22, but you can also optionally install the latest version via =M-x
   package-install RET org RET=.

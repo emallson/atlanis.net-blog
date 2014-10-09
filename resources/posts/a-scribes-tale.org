@@ -120,7 +120,7 @@ post, I want to summarize how it is, how it was and how its changed.
 
    #+CAPTION: My sales from ~12am to ~11am -- not even close to peak hours
    #+ATTR_HTML: :style height: 600px !important :class img-center
-   [[http://media.atlanis.net/blog/14-march-glyph-sales.png]]
+   [[https://atlanis.net/media/blog/14-march-glyph-sales.png]]
 
 * The Way Forward
    My goal right now is to do something that I've never managed once to do: get

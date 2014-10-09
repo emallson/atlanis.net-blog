@@ -115,7 +115,7 @@ situation I'm dealing with in my tutoring job.
   Today I got this gem of an email:
 
   #+ATTR_HTML: :style border: black 1px solid; :class img-center
-  [[http://media.atlanis.net/blog/tutoring-wtf-email.jpg]]
+  [[https://atlanis.net/media/blog/tutoring-wtf-email.jpg]]
 
   When I got this email, I was completely floored. I'd dedicated about 1.5 hours
   to helping this guy over the course of a couple of days. My normal working

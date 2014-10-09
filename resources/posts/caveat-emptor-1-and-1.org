@@ -60,7 +60,7 @@ TL;DR Version: Avoid 1&1.
 
   Here's a nice screenshot from my phone showing what I dealt with:
 
-  [[http://media.atlanis.net/blog/1-and-1-spam-log.png]]
+  [[https://atlanis.net/media/blog/1-and-1-spam-log.png]]
 
   I had to stop it by /changing my phone number on the 1&1 site!/ Not cool! I'm
   not the only one who's had this problem. For example:

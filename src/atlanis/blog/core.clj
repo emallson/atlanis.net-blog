@@ -42,7 +42,9 @@
         assets ((:optimizations config) (get-assets) {})]
     (stasis/empty-directory! (:export-directory config))
     (optimus.export/save-assets assets (:export-directory config))
-    (stasis/export-pages pages (:export-directory config) {:optimus-assets assets})))
+    (stasis/export-pages pages
+                         (:export-directory config)
+                         {:optimus-assets assets})))
 
 (defn -main
   [conf-section]

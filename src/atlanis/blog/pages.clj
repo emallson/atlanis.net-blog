@@ -7,11 +7,11 @@
 (defn export?
   "Determines whether a post should be exported"
   [[_ post]]
-  (not (= (:export (:headers post)) "nil")))
+  (not= (:export (:headers post))))
 
 (defn- create-page
   [f config]
-  (fn [context] (apply str (tpl/layout context (f) config))))
+  (fn [context] (clojure.string/join (tpl/layout context (f) config))))
 
 (defn- single-posts
   [posts config]

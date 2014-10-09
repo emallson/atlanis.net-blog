@@ -15,7 +15,9 @@
   (apply
    hash-map
    (flatten
-    (map (fn [row] [(keyword (clojure.string/lower-case (second row))) (nth row 2)])
+    (map (fn [row]
+           [(keyword (clojure.string/lower-case (second row)))
+            (nth row 2)])
          (re-seq #"(?m)^\s*#\+(\w+):\s*(.+)$" content)))))
 
 (def org-date-formatter (formatter "'<'yyyy-MM-dd EEE HH:mm'>'"))

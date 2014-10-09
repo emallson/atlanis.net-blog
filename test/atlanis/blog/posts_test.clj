@@ -28,10 +28,12 @@
         post (get-org-post filename (slurp filename))]
     (is (= (:headers post) headers))
     (is (= (:title post) (:title headers)))
-    (is (= (:date post) (clj-time.format/parse org-date-formatter (:date headers))))
+    (is (= (:date post) (clj-time.format/parse
+                         org-date-formatter (:date headers))))
     (is (= (:path post) "/posts/echogenetic.html"))
     (is (not (empty? (:content post))))))
 
 (deftest test-get-posts
-  (let [post-count (dec (count (file-seq (clojure.java.io/file "resources/posts/"))))]
+  (let [post-count (-> (clojure.java.io/file "resources/posts/")
+                       file-seq count dec)]
     (is (= (count (get-posts "resources/posts/")) post-count))))

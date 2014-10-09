@@ -1,5 +1,6 @@
 ;;; templates.clj
-;;; This file was more or less straight-up copied from https://github.com/magnars/what-the-emacsd
+;;; This file was originally copied from
+;;; https://github.com/magnars/what-the-emacsd
 (ns atlanis.blog.templates
   (:require [net.cgrand.enlive-html :refer :all]
             [optimus.link :as link]
@@ -20,7 +21,8 @@
 
 (deftemplate layout "templates/layout.html"
   [request body config]
-  [:title] (after (map #(stylesheet-link % config) (link/bundle-paths request ["/styles.css"])))
+  [:title] (after (map #(stylesheet-link % config)
+                       (link/bundle-paths request ["/styles.css"])))
   [:h1.site-title :a] (set-attr :href (:root config))
   [:div#content] (content body))
 
@@ -42,28 +44,36 @@
 
 (defsnippet all-posts (snip "templates/all-posts.html")
   [root] [posts config]
-  [:article.post] (clone-for 
-                   [[_ post] posts]
-                   (let [link (str (:root config) (:path post))]
-                     (content (at (post-body post)
-                                  [:h1.entry-title] (do->
-                                                     unwrap
-                                                     (wrap :a {:class "entry-title-link"})
-                                                     (wrap :h1 {:class "entry-title"}))
-                                  #{[:a.post-date]
-                                    [:a.entry-title-link]} (set-attr :href link)
-                                    [:a.comments-link] (set-attr :href (str link "#disqus_thread")))))))
+  [:article.post]
+  (clone-for
+   [[_ post] posts]
+   (let [link (str (:root config) (:path post))]
+     (content
+      (at (post-body post)
+          [:h1.entry-title] (do->
+                             unwrap
+                             (wrap :a {:class "entry-title-link"})
+                             (wrap :h1 {:class "entry-title"}))
+          #{[:a.post-date]
+            [:a.entry-title-link]} (set-attr :href link)
+          [:a.comments-link] (set-attr :href (str link "#disqus_thread")))))))
 
 (defsnippet post-page (snip "templates/post-page.html")
   [root] [posts page-number num-pages config]
   [:article.post] (substitute (all-posts posts config))
   [:a#btn-newer-posts] #(when (> page-number 1)
                           (let [f (do->
-                                   (set-attr :href (str (:root config) "/page/" (dec page-number) ".html")))]
+                                   (set-attr :href (str (:root config)
+                                                        "/page/"
+                                                        (dec page-number)
+                                                        ".html")))]
                             (f %)))
   [:a#btn-older-posts] #(when (< page-number num-pages)
                           (let [f (do->
-                                   (set-attr :href (str (:root config) "/page/" (inc page-number) ".html")))]
+                                   (set-attr :href (str (:root config)
+                                                        "/page/"
+                                                        (inc page-number)
+                                                        ".html")))]
                             (f %))))
 
 (defsnippet one-post (snip "templates/one-post.html")

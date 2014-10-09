@@ -3,7 +3,7 @@
 
 ;;; This file is more-or-less copy-pasted from @magnars what-the-emacsd source.
 ;;; Many thanks to him!
-;;; Link: https://github.com/magnars/what-the-emacsd/blob/master/src/what_the_emacsd/rss.clj
+;;; Link: http://git.io/FUEANA
 
 (defn- entry [post config]
   [:entry

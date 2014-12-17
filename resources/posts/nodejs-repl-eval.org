@@ -33,13 +33,13 @@ discovered that the state of Emacs ↔ Node.js integration is dilapidated at bes
   The first thing I did was try to figure out how to evaluate /things/ via
   Emacs Lisp. Thus, I began with this simple function:
 
-#+INCLUDE: "~/.emacs.d/nodejs-repl-eval.el" src emacs-lisp :lines "12-16"
+#+INCLUDE: "../includes/source/nodejs-repl-eval.el" src emacs-lisp :lines "12-16"
 
   It worked! Even better, it put the contents of the region in the REPL so that
   it was clear /exactly/ what had been evaluated! Whole-buffer evaluation was
   similarly trivial:
 
-#+INCLUDE: "~/.emacs.d/nodejs-repl-eval.el" src emacs-lisp :lines "73-81"
+#+INCLUDE: "../includes/source/nodejs-repl-eval.el" src emacs-lisp :lines "73-81"
 
   I knew I wasn't going to be happy with just region evaluation, though, so I
   began hunting for a straightforward way to extract meaning from a =js2-mode=
@@ -71,7 +71,7 @@ discovered that the state of Emacs ↔ Node.js integration is dilapidated at bes
   that the point currently resided in. For that reason, I implemented a simple
   reverse-searching function:
 
-#+include: "~/.emacs.d/nodejs-repl-eval.el" src emacs-lisp :lines "23-34"
+#+include: "../includes/source/nodejs-repl-eval.el" src emacs-lisp :lines "23-34"
 
   This searches backwards one character at a time to find the closest
   node. Note that it does *not* find the closest /function node/, only the
@@ -81,7 +81,7 @@ discovered that the state of Emacs ↔ Node.js integration is dilapidated at bes
 
   My current implementation of function evaluation looks like this:
 
-#+include: "~/.emacs.d/nodejs-repl-eval.el" src emacs-lisp :lines "35-46"
+#+include: "../includes/source/nodejs-repl-eval.el" src emacs-lisp :lines "35-46"
 
 * You Know What I Meant!
 
@@ -99,10 +99,10 @@ discovered that the state of Emacs ↔ Node.js integration is dilapidated at bes
   - If the point is at the end of the line, try to evaluate the statement on
     that line (works with multiline statements thanks to Mooz's awesome work)
   - Otherwise, evaluate the first statement or function found
-    
+
   This is succinctly represent-able using ~cond~:
 
-#+include: "~/.emacs.d/nodejs-repl-eval.el" src emacs-lisp :lines "58-72"
+#+include: "../includes/source/nodejs-repl-eval.el" src emacs-lisp :lines "58-72"
 
 * The Beauty of the Emacs Development Process
 

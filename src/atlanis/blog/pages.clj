@@ -7,7 +7,7 @@
 (defn export?
   "Determines whether a post should be exported"
   [[_ post]]
-  (not= (:export (:headers post))))
+  (not= (:export (:headers post)) "nil"))
 
 (defn- create-page
   [f config]

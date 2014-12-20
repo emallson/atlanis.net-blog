@@ -12,13 +12,17 @@
 (defn get-org-headers
   "Gets the #+STUFF headers from an Org file. Returns a hash-map of them."
   [content]
-  (apply
-   hash-map
-   (flatten
-    (map (fn [row]
-           [(keyword (clojure.string/lower-case (second row)))
-            (nth row 2)])
-         (re-seq #"(?m)^\s*#\+(\w+):\s*(.+)$" content)))))
+  (reduce
+   (fn [r [k v]]
+     (cond
+       (seq? (r k)) (assoc r k (conj (r k) v))
+       (r k) (assoc r k (seq [(r k) v]))
+       :else (assoc r k v)))
+   {}
+   (map (fn [row]
+          [(-> row second clojure.string/lower-case keyword)
+           (nth row 2)])
+        (re-seq #"(?m)^\s*#\+(\w+):\s*(.+)$" content))))
 
 (def org-date-formatter (formatter "'<'yyyy-MM-dd EEE HH:mm'>'"))
 

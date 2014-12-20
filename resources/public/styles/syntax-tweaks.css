@@ -45,3 +45,9 @@ pre {
     background-color: #3F3F3F;
     font-family: "Source Code Pro";
 }
+
+.site-branding {
+    margin: 14.85px auto !important;
+    width: 11em !important;
+    float: none !important;
+}

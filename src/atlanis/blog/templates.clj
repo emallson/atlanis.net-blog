@@ -3,6 +3,7 @@
 ;;; https://github.com/magnars/what-the-emacsd
 (ns atlanis.blog.templates
   (:require [net.cgrand.enlive-html :refer :all]
+            [net.cgrand.jsoup :as jsoup]
             [optimus.link :as link]
             [clojure.java.io :as io]))
 
@@ -32,17 +33,21 @@
 (def date-formatter
   (partial clj-time.format/unparse date-format))
 
-(defn snip
-  [path]
-  (html-snippet (slurp (io/resource path))))
+(defsnippet post-title {:parser jsoup/parser}
+  "templates/post-title.html" [:div] [title]
+  [:.title] (content (if (seq? title)
+                       (first title)
+                       title))
+  [:.subtitle] (if (seq? title)
+                 (content (second title))))
 
-(defsnippet post-body (snip "templates/post-body.html")
+(defsnippet post-body "templates/post-body.html"
   [root] [post]
-  [:h1.entry-title] (content (:title post))
-  [:div.entry-content] (content (html-snippet (:content post)))
+  [:div.entry-title] (substitute (post-title (:title post)))
+  [:div.entry-content] (html-content (:content post))
   [:a.post-date] (content (date-formatter (:date post))))
 
-(defsnippet all-posts (snip "templates/all-posts.html")
+(defsnippet all-posts "templates/all-posts.html"
   [root] [posts config]
   [:article.post]
   (clone-for
@@ -50,15 +55,11 @@
    (let [link (str (:root config) (:path post))]
      (content
       (at (post-body post)
-          [:h1.entry-title] (do->
-                             unwrap
-                             (wrap :a {:class "entry-title-link"})
-                             (wrap :h1 {:class "entry-title"}))
           #{[:a.post-date]
             [:a.entry-title-link]} (set-attr :href link)
           [:a.comments-link] (set-attr :href (str link "#disqus_thread")))))))
 
-(defsnippet post-page (snip "templates/post-page.html")
+(defsnippet post-page "templates/post-page.html"
   [root] [posts page-number num-pages config]
   [:article.post] (substitute (all-posts posts config))
   [:a#btn-newer-posts] #(when (> page-number 1)
@@ -76,7 +77,7 @@
                                                         ".html")))]
                             (f %))))
 
-(defsnippet one-post (snip "templates/one-post.html")
+(defsnippet one-post "templates/one-post.html"
   [root] [[_ post] config]
   [:article.post] (prepend (at (post-body post)
                                [:a.comments-link] nil))

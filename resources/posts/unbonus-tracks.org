@@ -1,0 +1,85 @@
+#+TITLE: Un-Bonus Tracks
+#+TITLE: Fixing Album Tags with mpc, metaflac and zsh
+#+AUTHOR: J David Smith
+#+DATE: <2014-12-19 Fri 21:35>
+#+OPTIONS: toc:nil num:nil
+
+Lately, I've bought a lot of [[https://www.alfa-matrix.com][Alfa Matrix]] music off of [[https://alfamatrix.bandcamp.com/music][their Bandcamp page]] (not
+kidding, check out [[https://bandcamp.com/emallson][my collection]]). I love the way Bandcamp works and am
+enamored with the music I've gotten from Alfa Matrix. However, I have one
+significant annoyance with the music files themselves: almost all of the albums
+are tagged with "<ALBUM NAME> (Bonus Tracks Version)". Nothing wrong with that
+per-se, but it annoys me and messes up my last.fm scrobbles. After searching
+for and failing to find a (Linux) tool that'd let me bulk-transform FLAC tags,
+I decided to do it myself.
+
+Since this task is most easily done with =mpc= (which has a searchable list of my
+collection) and =metaflac= (a command line flac metadata editor), I turned to
+shell scripting. The full script to accomplish this was pretty trivial:
+
+#+include: "../includes/source/unbonus-tracks.zsh" src sh
+
+This few lines of code let me fix the six or seven albums that I'd been putting
+off fixing for months. The heart of it is in the nested substitutions being
+performed in the =metaflac --set-tag= command. It looks pretty insane, but
+actually is quite simple.
+
+It breaks down into 4 separate transformations (listed in order of
+application):
+
+  - ~${tag#ALBUM=}~
+
+    The =#= tells zsh to remove the string ~ALBUM=~ from the /beginning/ of the
+    string if it is present. This is removed because the next transformation
+    will muss it up.
+
+  - =${(C)tag}=
+
+    Capitalizes the first letter of each word (and lowercases the rest) in the
+    string.
+
+  - =${...%$suffix}=
+
+    Removes the value in the =$suffix= variable from the /end/ of the
+    string. Note that this is an exact match -- not a regular expression -- so
+    the parentheses in the =$suffix= are fine.
+
+  - =${.../The /the }=
+
+    Replaces all instances of =The= with =the= in the string. If there is one
+    word I am picky about capitalization for, it is =the=.
+
+    This analogous to doing =sed -ie s/The /the /g $file=
+
+The result of all these transformations is an album title that is (more or
+less) properly capitalized and missing the "(Bonus Tracks Version)" suffix!
+
+Before:
+
+#+BEGIN_EXAMPLE
+Breaking the void (Bonus Tracks Version)
+Empty (Bonus Tracks Version)
+Gotta get mad (Bonus Tracks Version)
+Letting go (Bonus Tracks Version)
+Moving on (Bonus Tracks Version)
+Return (Bonus Tracks Version)
+Winter Cities (Bonus Tracks Version)
+#+END_EXAMPLE
+
+After:
+
+#+BEGIN_EXAMPLE
+Breaking the Void
+Empty
+Gotta Get Mad
+Letting Go
+Moving On
+Return
+Winter Cities
+#+END_EXAMPLE
+
+The simplicity of this script means that I will likely be able to extend it in
+the future to fix common music tagging ailments.
+
+Of course, I'll have to make sure I never run it on a Skinny Puppy album. Ye
+ever seen [[https://metropolisrecords.bandcamp.com/album/weapon][one o' those]]?

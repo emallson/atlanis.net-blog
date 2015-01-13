@@ -1,0 +1,151 @@
+#+TITLE: 2014 in Review
+#+AUTHOR: J David Smith
+#+DATE: <2015-01-12 Mon 11:59>
+#+OPTIONS: toc:nil num:nil
+
+2014 was a big year for me. More opportunities presented themselves, more
+things changed, and more events occurred than in any time of my life
+prior. It's time for me to review some of the big points; to reflect on what
+went well and what didn't.
+
+* Interning at IBM
+
+  When I applied for internships in December of 2013, I wasn't sure what would
+  happen. I applied to big names -- Google, Microsoft, IBM, and others as I did
+  the year prior. In 2012-2013, I got no responses. In 2013-2014, I got
+  many. My applications to both Google and IBM were accepted, Riot Games asked
+  for an interview (which I unfortunately had to decline because I'd already
+  accepted IBM's offer), and Microsoft ignored my existence (maybe because my
+  resumé is slathered in Linux tooling and has not a whiff of Microsoft on it).
+
+  I struggled for weeks with the decision between Google and IBM. Working at
+  Google is a dream job, but there was a catch: the project I would be working
+  on there was boring. Meanwhile, the project I was offered at IBM was really
+  cool and exciting. At the time, it involved significant open-source
+  contributions. Although it changed later, the change helped refine the
+  project goals and clarify what my team would be doing.
+
+  In the end, I chose IBM. I was both looking forward to and dreading starting
+  there at the end of May. What if I had chosen incorrectly? Once we got
+  started, however, all my doubt vanished. The project turned out to be just as
+  exciting as it had sounded. Even better: I had the pleasure of working with a
+  phenomenal group of people. On the IBM side, we had a fantastic manager ([[https://twitter.com/rossgrady][Ross
+  Grady]]) and great support from the group we were working with.
+
+  On the intern side, things couldn't have been better. My team was phenomenal:
+  John and Walker were (and are) great technically, and all four of us (me,
+  John, Walker, and Chris) worked together without even a hint of an issue
+  throughout the Summer. What's more, I was surprised at how welcome I felt in
+  the intern group. I've never been very comfortable socially, and yet by the
+  end of the Summer there is but one that I'd not call a friend.
+
+  The biggest benefit of the internship for me was not the technical knowledge
+  I gained, the skills I developed, money I made. It was the opportunity to
+  work with these people. Prior to this, I had never had the chance to work
+  with other programmers. I'd worked in a research lab, but that is a very
+  different focus. Seeing how capable my fellow interns were and realizing that
+  I was actually capable of keeping up with them was a tremendous confidence
+  boost for me.
+
+  I have no regrets about my decision to work at IBM this past Summer. I came
+  out of it knowing more, having more friends and contacts, and with several
+  offers for positions at IBM. I ended up declining all of them to pursue a
+  PhD, but set up an internship with one of the security software teams for
+  Summer 2015.
+
+* The Interview
+
+  In the middle of the Summer, I got a wholly unexpected phone call: a Google
+  recruiter contacted me about interviewing for a full-time position. At the
+  time, my plans for the future were undecided but leaning heavily towards the
+  pursuit of a PhD. I told him that I would be willing to talk more after the
+  Summer ended, when I had more time.
+
+  When I followed up with him in August/September, things moved rapidly. I was
+  able to skip the phone interviews because I'd done well enough on the ones
+  for the internship to receive an offer. I got to fly to California and do
+  interview in person! Working full-time at Google requires passing a high bar,
+  so being interviewed indicates that I may be close to it.
+
+  In the end, I did not receive an offer. However, I was thrilled at the
+  thought that I might be capable of reaching and surpassing the skill level
+  needed for entry. This also forced me to mentally work out how to deal with
+  serious rejection. I have been generally successful throughout my life, and
+  hadn't had any rejection on this level before. I am glad that it came at a
+  time when I had the opportunity to stop and think about it, rather than a
+  super-busy season.
+
+* The Fulbright Program
+
+  I also began working on an application to the [[http://us.fulbrightonline.org/][Fulbright U.S. Student Program]]
+  in the summer. This program -- if I were accepted -- would let me study at a
+  school almost anywhere in the world. The program grant covers one year, but I
+  will be able to build a case for financial aid and visa for continuing on
+  should I desire.
+
+  The application for this is for the most part not too bad. However, the two
+  essays that go along with it (Personal Statement & Statement of Purpose) were
+  especially difficult. I had never written anything like them before and was
+  ill-prepared to do so. The advisor at UK was incredibly helpful in this, and
+  I believe that I ended up with a competitive application. Regardless, I spent
+  a solid month and a half thinking about nothing else. This prepared me well
+  to write the statements for grad school applications, but was a significant
+  time sink.
+
+  The worst part about this application is that I won't know the result until
+  March of this year, while the deadline was September of last year. The long
+  waiting period is killer, and is a problem I am facing in other areas as
+  well.
+
+* Graduate School Applications
+
+  This is where I made my biggest mistake of the year: I did not work on grad
+  school applications on Thanksgiving break. I took the week off: I slept, I
+  played video games, I wrote code. I did not apply to grad school. Because of
+  this, I was ill-prepared to meet the popular 15 December deadline. I was more
+  prepared to meet the 1 January deadline that others have, but between the
+  insanity of finals week (15-20 Dec.) and Christmas, ended up being largely
+  tardy with that as well. (Also, far fewer schools have the later deadline)
+
+  I learned in 2012/2013 not to wait so long. I made a point of doing
+  internship applications in '13 on Thanksgiving break so as to not miss
+  deadlines. I learned the lesson, and then in arrogance forgot it. I applied
+  to four schools: MIT, Texas A&M, UFlorida and UKansas. I have already been
+  accepted into UKansas (0.0), but we'll see what happens.
+
+  I probably won't hear back from the other three schools until mid-March. I
+  will have little enough time to make a decision, and will have to start
+  planning for the Fall immediately. What really gets me is simply the waiting
+  period. I do not know what will happen. I cannot realistically make /any/
+  plans for or assumptions about after the summer until March. It sucks. I
+  don't like it.
+
+* Goals for 2014
+
+  I didn't really set goals for 2014. One that I stumbled upon through
+  meditation on Tom Shear's (Assemblage 23) [[https://www.youtube.com/watch?v%3Dazr7c5a_x9c][Otherness]]. This is a long-term
+  goal: be a better person. I started trying to write down a concrete list of
+  this while writing this blog post, but I will need to think about it more. I
+  realize how incredibly wishy-washy 'be a better person' is, and need to nail
+  it down so I know what I'm going for. Details will be a blog post sometime in
+  the next week.
+
+* Looking Forward: Goals for 2015
+
+  I am not a fan of New Years resolutions, and thus have none. However, over
+  the course of last semester I became of several deficiencies in my overall
+  behavior. In particular: my aversion to lists and my inconsistency.
+
+  Lists are helpful tools, yet I often do not use them. I saw how my dad became
+  dependent on his lists to remember things and suppose I overreacted. I
+  started keeping lists of assignments and due dates during this semester, and
+  it helped reduce the number of times that I missed an assignment due to
+  forgetfulness.
+
+  This is one method of moving towards my present goal: becoming more
+  consistent. Self-discipline is not one of my strong points, but I have been
+  working on improving. The impact of this will be better control over what I
+  buy, what I eat, and how I spend my time. It meshes well with my goal of 'be
+  a better person' (lol), as control will allow me to be who I want to be.
+
+  I have a long way to go.

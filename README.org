@@ -2,7 +2,8 @@
 #+DATE: <2014-03-03 Mon 14:26>
 
 * What is this?
-  This is the source repository for my blog. The site is built using
+  This was the source repository for my blog until [[https://atlanis.net/blog/2015/09/08/new-blog-again/][Fall 2015]]. 
+  You can read my reasons for switching away from this engine [[https://atlanis.net/blog/2015/09/08/new-blog-again/][on my blog]]. The site is built using
   [[https://github.com/magnars/stasis][stasis]].
 
   You can see the resulting site [[http://atlanis.net/blog/][here]].
